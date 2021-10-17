@@ -1,3 +1,10 @@
+.container {
+    padding: 0 144px;
+}
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
 .col-md-12 {
     max-width: 100%;
 }
@@ -34,8 +41,21 @@
 .col-md-1 {
     max-width: 8.333333%;
 }
+main .list-collection,
+main .list-product {
+    column-gap: 20px;
+}
+main .list-benefit {
+    column-gap: 48px;
+}
 
 @media screen and (max-width: 479px) {
+    .container {
+        padding: 0 24px;
+    }
+    .row {
+        flex-wrap: wrap;
+    }
     .col-xs-12 {
         max-width: 100%;
     }
@@ -71,5 +91,18 @@
     }
     .col-xs-1 {
         max-width: 8.333333%;
+    }
+    main .list-collection,
+    main .list-product,
+    main .list-benefit {
+        column-gap: 0;
+    }
+    .collection .row,
+    .ptoday .row,
+    .selected .row {
+        row-gap: 8px;
+    }
+    main .list-benefit {
+        row-gap: 16px;
     }
 }

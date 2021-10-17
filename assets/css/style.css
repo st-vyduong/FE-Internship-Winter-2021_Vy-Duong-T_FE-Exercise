@@ -6,43 +6,27 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
-
-.container {
-    padding: 0 144px;
-}
-
-.row {
-    display: flex;
-    flex-wrap : nowrap;
-}
-
 a {
     text-decoration: none;
     color: #FFFFFF;
 }
-
 ul {
     list-style: none;
 }
-
 li {
     display: inline;
 }
-
 .btn {
     border: none;
     background-color: #FFFFFF;
     cursor: pointer;
 }
-
 .txt-center {
     text-align: center;
 }
-
 .justify-content-between {
     justify-content: space-between;
 }
-
 .yellow-text {
     color: #FBB03B;
 }
@@ -51,51 +35,40 @@ header {
     height: 48px;
     margin-top: 48px;
 }
-
 header .logo {
     height: 48px;
 }
-
 .logo .logo-img {
     width: 140px;
     height: 35px;
 }
-
-
 header li.menu-item {
     margin: 0 70px;
 }
-
 header li.menu-item a {
     color: #FBB03B;
     font-size: 18px;
     font-weight: bold;
     line-height: 48px;
 }
-
 header .header-function,
 header .logo {
     display: flex;
     align-items: center;
 }
-
 header .header-function {
     height: 100%;
 }
-
 .header-function .function-img {
     width: 24px;
     height: 24px;
 }
-
 .function-item:not(:last-child) {
     padding-right: 24px;
 }
-
 main {
     margin-top: -96px;
 }
-
 main .banner {
     height: 800px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%), url("/assets/img/banner.png");
@@ -104,7 +77,6 @@ main .banner {
     position: relative;
     z-index: -1;
 }
-
 .banner .container-title {
     position: absolute;
     width: 50%;
@@ -112,23 +84,19 @@ main .banner {
     height: 85%;
     padding-left: 16.6667%;
 }
-
 .container-title .title h2 {
     font-size: 72px;
     font-weight: bold;
     color: #fff;
 }
-
 .banner .title span {
     color: #FBB03B;
 }
-
 .banner .shop-now {
     background: url("/assets/img/shop_now.png") no-repeat;
     background-size: 36px;
     margin-top: 24px;
 }
-
 .banner .sn-btn {
     text-decoration: underline;
     font-size: 24px;
@@ -136,7 +104,6 @@ main .banner {
     line-height: 36px;
     padding-left: 60px;
 }
-
 main .container-pills {
     width: 80%;
     height: 15%;
@@ -148,49 +115,37 @@ main .container-pills {
     position: absolute;
     bottom: 0;
 }
-
 main .adventage-img {
     width: 36px;
     height: 36px;
     vertical-align: top;
 }
-
 main .adventage-content {
     display: inline-block;
     width: 70%;
     padding-left: 16px;
 }
-
 main .adventage-text {
     font-weight: bold;
     font-size: 14px;
     line-height: 2;
 }
-
 main .adventage-detail {
     font-size: 12px;
     font-weight: normal;
     line-height: 1.5;
     color: #A8A8A8;
 }
-
 main .collection {
     margin-top: 48px;
 }
-
-main .list-collection {
-    column-gap: 20px;
-}
-
 main .list-collection-item {
     position: relative;
 }
-
 main .collection-content {
     width: 100%;
     height: 100%;
 }
-
 main .collection-content::after {
     content: "";
     position: absolute;
@@ -202,24 +157,20 @@ main .collection-content::after {
     opacity: 0.7;
     z-index: 1;
 }
-
 main .collection-content > * {
     z-index: 100;
 }
-
 main .collection-img {
     width: 100%;
     height: 100%;
     position: relative;
     z-index: 1;
 }
-
 main .collection-item-content {
     position: absolute;
     top: 50%;
     left: 8%;
 }
-
 .badge {
     font-size: 12px;
     font-weight: bold;
@@ -229,13 +180,11 @@ main .collection-item-content {
     padding: 5px 10px;
     border-radius: 15px;
 }
-
 .collection .badge {
     position: absolute;
     top: 40%;
     left: 8%;
 }
-
 .collection-item-text,
 .newsletter-text {
     font-size: 24px;
@@ -243,11 +192,9 @@ main .collection-item-content {
     font-weight: lighter;
     color: #FFFFFF;
 }
-
 .newsletter-text {
     width: 80%;
 }
-
 .show-btn,
 .collection-btn {
     padding: 16px 20px;
@@ -255,64 +202,51 @@ main .collection-item-content {
     font-size: 13px;
     font-weight: bold;
 }
-
 .collection-btn {
     margin-top: 20%;
 }
-
 main .selected {
     margin-top: 96px;
     position: relative;
 }
-
 main .selected-header {
     display: flex;
     justify-content: space-between;
 }
-
 .selected .show-btn {
     border: 1px solid #C4C4C4;
     position: absolute;
     top: 0;
     right: 144px;
 }
-
-
 main .list-product {
-    column-gap: 20px;
     padding-top: 36px;
 }
-
 .title {
     font-size: 32px;
     font-weight: lighter;
     color: #333333;
 }
-
 main .product-card {
     width: 100%;
     height: 100%;
     padding-bottom: 12px;
     position: relative;
 }
-
 main .badge {
     position: absolute;
     top: 6%;
     left: 6%;
 }
-
 .product-card .product-img {
     width: 100%;
     height: 85%;
     position: relative;
 }
-
 .product-sale {
     display: flex;
     justify-content: space-between;
 }
-
 .product-name {
     font-style: normal;
     font-weight: 300;
@@ -320,77 +254,61 @@ main .badge {
     line-height: 24px;
     color: #333333;
 }
-
 .product-price {
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
 }
-
 .discount-price {
     color: #FF0000;
 }
-
 .basic-price {
     color: #CECECE;
 }
-
 .normal-price {
     color: #333333;
 }
-
 main .choose {
     margin-top: 48px;
     background-color: #F7F7F7;
 }
-
 main .container-choose {
     padding-top: 48px;
     padding-bottom: 48px;
 }
-
 .list-benefit {
     padding-top: 48px;
-    column-gap: 48px;
 }
-
 .benefit-img {
     width: 68px;
     height: 68px;
     display: block;
 }
-
 .benefit-content {
     padding-top: 48px;
 }
-
 main .ptoday {
     margin-top: 48px;
 }
-
 main .container-newsletter {
     padding-top: 86px;
     padding-bottom: 86px;
 }
-
 main .newsletter {
     margin-top: 48px;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.63) 33.28%, rgba(0, 0, 0, 0) 94.05%), url("/assets/img/newsletter.png") no-repeat;
     background-size: cover;
     position: relative;
 }
-
 main .newsletter-subcribe {
     flex-grow: 1;
 }
-
 main .subcribe-form {
     display: flex;
     justify-content: space-between;
     padding: auto 0;
 }
-
 main .email-subcribe {
     border: none;
     background: #FFFFFF;
@@ -400,7 +318,6 @@ main .email-subcribe {
     color: #ABABAB;
     padding: 14px 24px;
 }
-
 main .subcribe-btn {
     font-style: normal;
     font-weight: bold;
@@ -413,15 +330,12 @@ main .subcribe-btn {
 footer {
     background-color: #FBB03B;
 }
-
 footer .container-footer {
     padding-top: 46px;
 }
-
 footer .footer-info {
     padding-bottom: 48px;
 }
-
 footer .topic-item {
     text-decoration: none;
     color: #FFFFFF;
@@ -432,11 +346,9 @@ footer .topic-item {
     font-size: 14px;
     line-height: 150%;
 }
-
 footer .intro-content {
     margin-top: 24px;
 }
-
 .intro-text {
     font-style: normal;
     font-weight: normal;
@@ -445,15 +357,12 @@ footer .intro-content {
     color: #FFFFFF;
     width: 75%;
 }
-
 footer .footer-list-social {
     padding-top: 56px;
 }
-
 .list-social-item:not(:first-child) {
     padding-left: 32px;
 }
-
 footer .topic-text {
     font-style: normal;
     font-weight: bold;
@@ -462,24 +371,19 @@ footer .topic-text {
     color: #FFFFFF;
     padding-bottom: 8px;
 }
-
 footer .footer-topic {
     flex-grow: 1;
 }
-
 footer .list-topic {
     display: flex;
     justify-content: space-between;
 }
-
 footer .list-topic-item {
     display: block;
 }
-
 footer .list-topic-item:not(:last-child) {
     padding-bottom: 24px;
 }
-
 .footer-text {
     font-size: 12px;
     font-weight: normal;
@@ -487,40 +391,16 @@ footer .list-topic-item:not(:last-child) {
     border-top: 1px solid #FFFFFF;
     line-height: 68px;
 }
-
 footer .social-icon {
     max-width: 16px;
     max-height: 16px;
 }
-
 footer .footer-author {
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
 @media screen and (max-width: 479px) {
-    .container {
-        padding: 0 24px;
-    }
-    .row {
-        flex-wrap: wrap;
-    }
-    main .list-collection,
-    main .list-product,
-    main .list-benefit {
-        column-gap: 0;
-    }
-    .title {
-        font-size: 18px;
-    }
-    .collection .row,
-    .ptoday .row,
-    .selected .row {
-        row-gap: 8px;
-    }
-    main .list-benefit {
-        row-gap: 16px;
-    }
     main .collection {
         margin-top: 24px;
     }
@@ -558,19 +438,19 @@ footer .footer-author {
     header .function-img {
         filter: brightness(0) saturate(100%);
     }
-
     .header-function .function-img {
         width: 20px;
         height: 20px;
     }
-
     .logo .logo-img {
         width: 128px;
         height: 32px;
     }
-
     main {
         margin-top: -72px;
+    }
+    .title {
+        font-size: 18px;
     }
     .banner .shop-now {
         background-size: 32px;
