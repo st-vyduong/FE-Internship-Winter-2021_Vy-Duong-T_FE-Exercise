@@ -34,6 +34,10 @@ li {
 header {
     height: 48px;
     margin-top: 48px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 header .logo {
     height: 48px;
@@ -74,15 +78,11 @@ main .banner {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%), url("../img/banner.png");
     background-position: center;
     background-size: cover;
-    position: relative;
-    z-index: -1;
 }
 .banner .container-title {
-    position: absolute;
-    width: 50%;
-    top: 25%;
-    height: 85%;
-    padding-left: 16.6667%;
+    height: 675px;
+    padding-left: 240px;
+    padding-top: 222px;
 }
 .container-title .title h2 {
     font-size: 72px;
@@ -91,6 +91,7 @@ main .banner {
 }
 .banner .title span {
     color: #FBB03B;
+    display: block;
 }
 .banner .shop-now {
     background: url("../img/shop_now.png") no-repeat;
@@ -106,14 +107,15 @@ main .sn-btn {
 }
 main .container-pills {
     width: 80%;
-    height: 15%;
+    height: 125px;
     padding: 20px 0;
-    padding-left: 16.6667%;
+    padding-left: 240px;
     padding-right: 96px;
     background-color: #FFFFFF;
     border-radius: 0 70px 0 0;
-    position: absolute;
-    bottom: 0;
+}
+main .adventage {
+    padding-top: 12px;
 }
 main .adventage-img {
     width: 36px;
@@ -163,7 +165,6 @@ main .collection-content > * {
 main .collection-img {
     width: 100%;
     height: 100%;
-    position: relative;
     z-index: 1;
 }
 main .collection-item-content {
@@ -203,7 +204,7 @@ main .collection-item-content {
     font-weight: bold;
 }
 .collection-btn {
-    margin-top: 20%;
+    margin-top: 55px;
 }
 main .selected {
     margin-top: 96px;
