@@ -1,9 +1,12 @@
 .container {
-    padding: 0 144px;
+    padding: 0 10px;
+    max-width: 1170px;
+    margin: 0 auto;
 }
 .row {
     display: flex;
     flex-wrap: nowrap;
+    padding: 0 -10px;
 }
 .col-md-12 {
     max-width: 100%;
@@ -51,10 +54,12 @@ main .list-benefit {
 
 @media screen and (max-width: 479px) {
     .container {
-        padding: 0 24px;
+        padding: 0 4px;
+        max-width: 335px;
     }
     .row {
         flex-wrap: wrap;
+        margin: 0 -4px;
     }
     .col-xs-12 {
         max-width: 100%;
