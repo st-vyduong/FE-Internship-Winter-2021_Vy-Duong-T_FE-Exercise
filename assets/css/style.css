@@ -157,7 +157,6 @@ main .collection-content::after {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0.7;
-    z-index: 1;
 }
 main .collection-content > * {
     z-index: 100;
@@ -171,6 +170,11 @@ main .collection-item-content {
     position: absolute;
     top: 50%;
     left: 8%;
+    height: 50%;
+}
+.collection-item-content .collection-item-text {
+    max-height: 60%;
+    padding-bottom: 55px;
 }
 .badge {
     font-size: 12px;
@@ -202,9 +206,6 @@ main .collection-item-content {
     border-radius: 30px;
     font-size: 13px;
     font-weight: bold;
-}
-.collection-btn {
-    margin-top: 55px;
 }
 main .selected {
     margin-top: 96px;
@@ -432,6 +433,9 @@ footer .footer-author {
     .container-title .title h2 {
         font-size: 48px;
     }
+    li.list-product-item {
+        width: calc(50% - 4px);
+    }
     header .menu {
         display: none;
     }
@@ -463,8 +467,13 @@ footer .footer-author {
     .pills {
         display: none;
     }
+    main .list-collection-item:not(:first-child) {
+        width: calc(50% - 4px);
+    }
     .banner .container-title {
         width: 100%;
+        padding-left: 24px;
+        padding-top: 343px;
     }
     .badge {
         font-size: 8px;
@@ -472,8 +481,6 @@ footer .footer-author {
     }
     .choose .benefit {
         display: flex;
-    }
-    .product-price {
         font-size: 10px;
     }
     .product-name {
