@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -75,29 +75,29 @@ main {
     margin-top: -96px;
 }
 main .banner {
-    height: 800px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%), url("../img/banner.png");
     background-position: center;
     background-size: cover;
+    position: relative;
 }
-.banner .container-title {
-    height: 675px;
-    padding-left: 240px;
+main .container-banner {
+    padding: 0 96px;
     padding-top: 222px;
+    margin-bottom: 24px;
 }
-.container-title .title h2 {
+.container-banner h2.title-text {
     font-size: 72px;
     font-weight: bold;
     color: #fff;
 }
-.banner .title span {
+.container-banner span.title-span {
     color: #FBB03B;
     display: block;
 }
 .banner .shop-now {
     background: url("../img/shop_now.png") no-repeat;
     background-size: 36px;
-    margin-top: 24px;
+    margin-bottom: 170px;
 }
 main .sn-btn {
     text-decoration: underline;
@@ -105,6 +105,20 @@ main .sn-btn {
     font-weight: bold;
     line-height: 36px;
     padding-left: 60px;
+}
+.banner .pills::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 125px;
+    background-color: #FFFFFF;
+    border-radius: 0 70px 0 0;
+}
+.pills > * {
+    z-index: 1;
+    position: relative;
 }
 main .container-pills {
     width: 80%;
@@ -116,8 +130,8 @@ main .container-pills {
     border-radius: 0 70px 0 0;
     margin: 0;
 }
-main .adventage {
-    padding-top: 12px;
+main .list-adventages {
+    padding-bottom: 24px;
 }
 main .adventage-img {
     width: 36px;
@@ -440,8 +454,9 @@ footer .footer-author {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .container-title .title h2 {
+    .container-banner h2.title-text {
         font-size: 48px;
+        margin-bottom: 16px;
     }
     li.list-product-item {
         width: calc(50% - 4px);
@@ -464,11 +479,15 @@ footer .footer-author {
     main {
         margin-top: -72px;
     }
+    main .container-banner {
+        padding: 270px 0;
+    }
     .title {
         font-size: 18px;
     }
     .banner .shop-now {
         background-size: 32px;
+        margin-bottom: 0;
     }
     main .sn-btn {
         font-size: 14px;
