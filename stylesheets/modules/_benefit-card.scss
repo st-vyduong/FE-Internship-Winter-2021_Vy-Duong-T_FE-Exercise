@@ -1,0 +1,38 @@
+.benefit {
+    .benefit-img {
+        width: 68px;
+        height: 68px;
+        display: block;
+    }
+    .benefit-content {
+        padding-top: 4.8rem;
+        h4.adventage-text {
+            font-weight: map-get($font-weight, bold);
+            font-size: map-get($font-size, normal);
+            line-height: 2;
+        }
+        p.adventage-detail {
+            font-size: map-get($font-size, sm);
+            font-weight: map-get($font-weight, medium);
+            line-height: 1.5;
+            color: map-get($color, grey-c);
+        }
+    }
+}
+@media screen and (max-width: 479px) {
+    .benefit {
+        display: flex;
+        align-items: center;
+        font-size: map-get($font-size, xxxs);
+        .benefit-content {
+            padding-left: 1.6rem;
+            padding-top: 0;
+            h4.adventage-text {
+                font-size: map-get($font-size, xxs);
+            }
+            p.adventage-detail {
+                font-size: map-get($font-size, xxxs);
+            }
+        }
+    }
+}

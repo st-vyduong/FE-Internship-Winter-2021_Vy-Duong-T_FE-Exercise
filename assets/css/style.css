@@ -75,7 +75,7 @@ main {
     margin-top: -96px;
 }
 main .banner {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%), url("../img/banner.png");
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%), url("../../assets/img/banner.png");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -95,7 +95,7 @@ main .container-banner {
     display: block;
 }
 .banner .shop-now {
-    background: url("../img/shop_now.png") no-repeat;
+    background: url("../../assets/img/shop_now.png") no-repeat;
     background-size: 36px;
     margin-bottom: 170px;
 }
@@ -317,7 +317,7 @@ main .container-newsletter {
 }
 main .newsletter {
     margin-top: 48px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.63) 33.28%, rgba(0, 0, 0, 0) 94.05%), url("../img/newsletter.png") no-repeat;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.63) 33.28%, rgba(0, 0, 0, 0) 94.05%), url("../../assets/img/newsletter.png") no-repeat;
     background-size: cover;
     position: relative;
 }

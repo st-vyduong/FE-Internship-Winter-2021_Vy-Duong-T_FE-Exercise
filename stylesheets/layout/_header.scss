@@ -18,9 +18,9 @@ header {
         li.menu-item {
             margin: 0 7rem;
             a {
-                color: $yellow;
-                font-size: 1.8rem;
-                font-weight: bold;
+                color: map-get($color, primary);
+                font-size: map-get($font-size, lg);
+                font-weight: map-get($font-weight, bold);
                 line-height: 4.8rem;
             }
         }
@@ -43,7 +43,7 @@ header {
     header {
         margin-top: 0;
         height: 72px;
-        background-color: $white;
+        background-color: map-get($color, white);
         .container-header {
             padding-top: 2rem;
             padding-bottom: 2rem;

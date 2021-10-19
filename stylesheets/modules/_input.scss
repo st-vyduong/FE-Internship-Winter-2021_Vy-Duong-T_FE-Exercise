@@ -1,16 +1,15 @@
 .form-input {
     border: none;
-    background: #FFFFFF;
+    background: map-get($color, white);
     border-radius: 6.1rem;    
-    font-size: 1.3rem;
-    color: #ABABAB;
+    font-size: map-get($font-size, xs);
+    color: map-get($color, grey-c);
     padding: 1.4rem 2.4rem;
-    width: 100%;
 }
 
 @media screen and (max-width: 479px) {
     .form-input {
-        font-size: 1.2rem;
-        padding: 0.6rem 1.2rem;
+        font-size: map-get($font-size, xxs);
+        padding: 1rem 1.2rem;
     }
 }

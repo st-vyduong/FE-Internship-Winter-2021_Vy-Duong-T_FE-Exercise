@@ -1,0 +1,46 @@
+.banner {
+    .container-banner {
+        padding: 0 9.6rem;
+        padding-top: 22rem;
+    }
+}
+.collection {
+    margin-top: 4.8rem;
+}
+.selected {
+    margin-top: 9.6rem;
+}
+.choose {
+    margin-top: 4.8rem;
+}
+.ptoday {
+    margin-top: 4.8rem;
+}
+.newsletter {
+    margin-top: 4.8rem;
+    .container-newsletter {
+        padding-top: 8.6rem;
+        padding-bottom: 8.6rem;
+    }
+}
+@media screen and (max-width: 479px) {
+    .banner {
+        .container-banner {
+            padding: 0;
+            padding-top: 34rem;
+            padding-bottom: 27rem;
+        }
+    }
+    .collection {
+        margin-top: 2.4rem;
+    }
+    .selected {
+        margin-top: 4.8rem;
+    }
+    .newsletter {
+        .container-newsletter {
+            padding-top: 8.6rem;
+            padding-bottom: 8.6rem;
+        }
+    }
+}

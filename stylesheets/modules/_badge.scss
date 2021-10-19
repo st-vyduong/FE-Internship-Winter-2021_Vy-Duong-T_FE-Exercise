@@ -1,8 +1,8 @@
 .badge {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: $white;
-    background-color: $red;
+    font-size: map-get($font-size, xxs);
+    font-weight: map-get($font-weight, bold);
+    color: map-get($color, white);
+    background-color: map-get($color, red);
     display: inline;
     padding: 0.5rem 1rem;
     border-radius: 1.5rem;

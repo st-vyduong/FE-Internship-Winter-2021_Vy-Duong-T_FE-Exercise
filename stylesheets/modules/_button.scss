@@ -1,31 +1,41 @@
 .btn {
     border: none;
-    background-color: #FFFFFF;
     cursor: pointer;
-}
-.border-radius-btn {
-    padding: 1.6rem 2rem;
-    border-radius: 3rem;
-    font-size: 1.3rem;
-    font-weight: bolder;
+    font-style: normal;
+    font-weight: map-get($font-weight, bold);
+    font-size: map-get($font-size , xs);
 }
 .form-btn {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: #333333;
+    color: map-get($color, grey-a);
     padding: 1.4rem 3rem;
     border-radius: 5.6rem;
-    background-color: $yellow;
-} 
+    background-color: map-get($color, primary);
+}
+.show-btn {
+    border: 1px solid map-get($color, grey-f);
+    color: map-get($color, grey-a);
+    padding: 1.4rem 3rem;
+    border-radius: 4rem;
+    background-color: transparent;
+}
+.collection-btn {
+    color: map-get($color, grey-a);
+    padding: 1.4rem 1.8rem;
+    border-radius: 3.3rem;
+    background-color: map-get($color, white);
+}   
 @media screen and (max-width: 479px) {
     .border-radius-btn {
-        padding: 0.5rem 1rem;
+        font-size: map-get($font-size, xxxs);
+        font-weight: map-get($font-weight, bold);
+    }
+    .collection-btn,
+    .show-btn {
         border-radius: 3rem;
-        font-size: 1rem;
-        font-weight: bold;
+        padding: 0.5rem 1rem;
     }
     .form-btn {
+        font-size: map-get($font-size, xs);
         padding: 0.7rem 2rem;
     } 
 }

@@ -1,5 +1,5 @@
 footer {
-    background-color: $yellow;
+    background-color: map-get($color, primary);
     .container-footer {
         padding-top: 4.6rem;
         .footer-info {
@@ -7,20 +7,21 @@ footer {
         }
     }
     p.footer-text {
-        font-size: 1.2rem;
-        font-weight: normal;
-        color: $white;
-        border-top: 1px solid $white;
+        font-size: map-get($font-size, xxs);
+        font-weight: map-get($font-weight, medium);
+        color: map-get($color, white);
+        border-top: 1px solid map-get($color, white);
         line-height: 6.8rem;
     }
 }
 .footer-intro {
     .intro-content {
         p.intro-text {
-            font-weight: lighter;
-            font-size: 1.4rem;
+            width: 80%;
+            font-weight: map-get($font-weight, regular);
+            font-size: map-get($font-size, sm);
             margin-top: 2.4rem;
-            color: $white;
+            color: map-get($color, white);
             line-height: 150%;
         }
     }
@@ -45,10 +46,10 @@ footer {
             display: block;
             .topic-text {
                 font-style: normal;
-                font-weight: bold;
-                font-size: 1.6rem;
+                font-weight: map-get($font-weight, bold);
+                font-size: map-get($font-size, normal);
                 line-height: 2.4rem;
-                color: $white;
+                color: map-get($color, white);
                 padding-bottom: 0.8rem;
             }
             ul.topic {
@@ -56,8 +57,8 @@ footer {
                     display: block;
                     padding: 0.8rem 0;
                     font-style: normal;
-                    font-weight: lighter;
-                    font-size: 1.4rem;
+                    font-weight: map-get($font-weight, regular);
+                    font-size: map-get($font-size, sm);
                     line-height: 150%;
                 }
             }

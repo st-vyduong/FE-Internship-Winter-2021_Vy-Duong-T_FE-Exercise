@@ -1,7 +1,31 @@
-$white: #FFFFFF;
-$yellow: #FBB03B;
-$beige: #FFF3DF;
-$red: #FF0000;
-$dark-gray: #333333;
-$light-gray-bg: #F6F6F6; 
-//breakpoints
+$color: (
+    primary: #FBB03B,
+    white: #FFFFFF,
+    black: #000000,
+    red: #FF0000,
+    beige: #FFF3DF,
+    grey-a: #333333,
+    grey-b: #808080,
+    grey-c: #A8A8A8,
+    grey-d: #CECECE,
+    grey-e: #F6F6F6,
+    grey-f: #C4C4C4,
+
+);
+$font-size: (
+    xxxs: 10px,
+    xxs: 12px,
+    xs: 13px,
+    sm: 14px,
+    normal: 16px,
+    lg: 18px,
+    xl: 24px,
+    xxl: 32px,
+    xxxl: 72px
+);
+$font-weight: (
+    regular: 300,
+    medium: 400,
+    bold: 700
+);
+$font-body: 'Poppins', 'sans-serif';
