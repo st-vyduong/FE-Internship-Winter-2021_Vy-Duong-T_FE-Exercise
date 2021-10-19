@@ -1,0 +1,88 @@
+footer {
+    background-color: $yellow;
+    .container-footer {
+        padding-top: 4.6rem;
+        .footer-info {
+            padding-bottom: 4.8rem;
+        }
+    }
+    p.footer-text {
+        font-size: 1.2rem;
+        font-weight: normal;
+        color: $white;
+        border-top: 1px solid $white;
+        line-height: 6.8rem;
+    }
+}
+.footer-intro {
+    .intro-content {
+        p.intro-text {
+            font-weight: lighter;
+            font-size: 1.4rem;
+            margin-top: 2.4rem;
+            color: $white;
+            line-height: 150%;
+        }
+    }
+    ul.footer-list-social {
+        padding-top: 5.6rem;
+        li.list-social-item {
+            .social-icon {
+                max-width: 16px;
+                max-height: 16px;
+            }
+        }
+        li.list-social-item:not(:first-child) {
+            padding-left: 3.2rem;
+        }
+    }
+}
+.footer-topic {
+    flex-grow: 1;
+    margin-left: 1.2rem;
+    ul.list-topic {
+        li.list-topic-item {
+            display: block;
+            .topic-text {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: $white;
+                padding-bottom: 0.8rem;
+            }
+            ul.topic {
+                li.topic-item {
+                    display: block;
+                    padding: 0.8rem 0;
+                    font-style: normal;
+                    font-weight: lighter;
+                    font-size: 1.4rem;
+                    line-height: 150%;
+                }
+            }
+        }
+        li.list-topic-item:not(:last-child) {
+            padding-bottom: 2.4rem;
+        }
+    }
+}
+@media screen and (max-width: 479px) {
+    .footer-intro {
+        padding: 0;
+        padding-bottom: 4.8rem;
+        .intro-content {
+            p.intro-text {
+                width: 100%;
+            }
+        }
+        ul.footer-list-social {
+            display: none;
+        }
+    }
+    .footer-topic {
+        ul.list-topic {
+            display: block;
+        }
+    }
+}

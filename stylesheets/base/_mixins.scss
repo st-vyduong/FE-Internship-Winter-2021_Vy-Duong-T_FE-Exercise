@@ -1,0 +1,3 @@
+@mixin pxRem($property, $value){
+    #{$property}: $value;
+}
