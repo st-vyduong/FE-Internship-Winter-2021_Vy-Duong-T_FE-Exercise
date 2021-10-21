@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <title>E-SHOP</title>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container container-header">
-            <div class="row justify-content-between">
-                <div class="col">
+            <div class="f-row justify-content-between">
+                <div>
                     <!-- Logo -->
                     <div class="logo">
                         <h1 class="logo-content">
-                            <a href="#"><img src="/assets/img/logo.png" alt="E-shop" class="logo-img"></a>
+                            <a href="#"><img src="./assets/img/logo.png" alt="E-shop" class="logo-img"></a>
                         </h1>
                     </div>
                 </div>
-                <div class="col">
+                <div>
                     <!-- Menu -->
                     <nav class="menu">
                         <ul class="list-menu">
@@ -30,18 +31,18 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col">
+                <div>
                     <!-- Function -->
                     <div class="header-function">
                         <ul class="list-function">
                             <li class="function-item">
-                                <a href="#"><img src="/assets/img/search.png" alt="search" class="function-img"></a>
+                                <a href="#"><img src="./assets/img/search.png" alt="search" class="function-img"></a>
                             </li>
                             <li class="function-item">
-                                <a href="#"><img src="/assets/img/cart.png" alt="cart" class="function-img"></a>
+                                <a href="#"><img src="./assets/img/cart.png" alt="cart" class="function-img"></a>
                             </li>
                             <li class="function-item">
-                                <a href="#"><img src="/assets/img/user.png" alt="user" class="function-img"></a>
+                                <a href="#"><img src="./assets/img/user.png" alt="user" class="function-img"></a>
                             </li>
                         </ul>
                     </div>
@@ -52,77 +53,75 @@
     <main>
         <!-- Banner -->
         <section class="banner">
-            <div class="container-title">
-                <div class="title">
+            <div class="container">
+                <div class="container-banner">
                     <h2 class="title-text">Sale of the <span class="title-span">summer</span> collection</h2>
-                </div>
-                <div class="shop-now">
-                    <img src="/assets/img/shop_now.png" alt="SHOP NOW" class="sn-img">
-                    <a href="#" class="sn-btn">SHOP NOW</a>
-                </div>
-            </div>
-            <!-- Pills -->
-            <div class="pills">
-                <div class="container container-pills">
-                    <ul class="row list-adventages">
-                        <li class="col list-adventage-item">
-                            <div class="adventage">
-                                <img src="/assets/img/header_benefit1.png" alt="Free Shipping" class="adventage-img">
-                                <div class="adventage-content">
-                                    <h4 class="adventage-text">Free Shipping</h4>
-                                    <p class="adventage-detail">On purchases over $199</p>
+                    <div class="shop-now">
+                        <a href="#" class="sn-btn">SHOP NOW</a>
+                    </div>
+                    <div class="pills">
+                        <ul class="row list-adventages justify-content-between">
+                            <li class="col list-adventage-item">
+                                <div class="adventage">
+                                    <img src="./assets/img/header_benefit1.png" alt="Free Shipping" class="adventage-img">
+                                    <div class="adventage-content">
+                                        <h4 class="adventage-text">Free Shipping</h4>
+                                        <p class="adventage-detail">On purchases over $199</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="col list-adventage-item">
-                            <div class="adventage">
-                                <img src="/assets/img/header_benefit2.png" alt="99% Satisfied Customers" class="adventage-img">
-                                <div class="adventage-content">
-                                    <h4 class="adventage-text">99% Satisfied Customers</h4>
-                                    <p class="adventage-detail">Our clients' opinions speak for themselves</p>
+                            </li>
+                            <li class="col list-adventage-item">
+                                <div class="adventage">
+                                    <img src="./assets/img/header_benefit2.png" alt="99% Satisfied Customers" class="adventage-img">
+                                    <div class="adventage-content">
+                                        <h4 class="adventage-text">99% Satisfied Customers</h4>
+                                        <p class="adventage-detail">Our clients' opinions speak for themselves</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="col list-adventage-item">
-                            <div class="adventage">
-                                <img src="/assets/img/header-benefit3.png" alt="Originality Guaranteed" class="adventage-img">
-                                <div class="adventage-content">
-                                    <h4 class="adventage-text">Originality Guaranteed</h4>
-                                    <p class="adventage-detail">30 days warranty for each product from our store</p>
+                            </li>
+                            <li class="col list-adventage-item">
+                                <div class="adventage">
+                                    <img src="./assets/img/header-benefit3.png" alt="Originality Guaranteed" class="adventage-img">
+                                    <div class="adventage-content">
+                                        <h4 class="adventage-text">Originality Guaranteed</h4>
+                                        <p class="adventage-detail">30 days warranty for each product from our store</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Collection -->
         <section class="collection">
             <div class="container">
-                <ul class="row list-collection">
-                    <li class="col-md-6 col-xs-12 list-collection-item">
-                        <div class="collection-content">
-                            <img src="/assets/img/collection.png" alt="New arrivalsare now in!" class="collection-img">
+                <ul class="row list-collection justify-content-between">
+                    <li class="col col-md-6 col-xs-12 list-collection-item">
+                        <div class="collection-content overlay">
+                            <img src="./assets/img/collection.png" alt="New arrivalsare now in!" class="collection-img">
                             <div class="collection-item-content">
                                 <h3 class="collection-item-text">New arrivalsare now in!</h3>
                                 <button class="btn collection-btn">SHOW COLLECTION</button>
                             </div>
-
+                        </div>
                     </li>
-                    <li class="col-md-3 col-xs-6 list-collection-item">
-                        <div class="collection-content">
-                            <img src="/assets/img/collection2.png" alt="Basic t-shirts $29,99" class="collection-img">
+                    <li class="col col-md-3 col-xs-6 list-collection-item">
+                        <div class="collection-content overlay">
+                            <img src="./assets/img/collection2.png" alt="Basic t-shirts $29,99" class="collection-img">
                             <div class="collection-item-content">
                                 <h3 class="collection-item-text">Basic t-shirts $29,99</h3>
                                 <button class="btn collection-btn">MORE DETAILS</button>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-6 list-collection-item">
-                        <div class="collection-content">
-                            <img src="/assets/img/collection3.png" alt="Sale this summer" class="collection-img">
-                            <span class="badge">-50%</span>
+                    <li class="col col-md-3 col-xs-6 list-collection-item">
+                        <div class="collection-content overlay">
+                            <img src="./assets/img/collection3.png" alt="Sale this summer" class="collection-img">
                             <div class="collection-item-content">
+                                <div class="badge-content">
+                                    <span class="badge">-50%</span>
+                                </div>
                                 <h3 class="collection-item-text">Sale this summer</h3>
                                 <button class="btn collection-btn">VIEW ALL</button>
                             </div>
@@ -133,14 +132,12 @@
         </section>
         <!-- Selected -->
         <section class="selected">
-            <div class="container">
-                <div class="selected-header">
-                    <h3 class="title">Selected just for you</h3>
-                </div>
-                <ul class="row list-product">
-                    <li class="col-md-3 col-xs-6 list-product-item">
+            <div class="container container-selected">
+                <h3 class="title">Selected just for you</h3>
+                <ul class="row list-product justify-content-between">
+                    <li class="col col-md-3 col-xs-6 list-product-item">
                         <div class="product-card">
-                            <img src="/assets/img/product1.png" alt="T-Shirt Summer Vibes" class="product-img">
+                            <img src="./assets/img/product1.png" alt="T-Shirt Summer Vibes" class="product-img">
                             <span class="badge">-30%</span>
                             <div class="product-info">
                                 <h4 class="product-name">T-Shirt Summer Vibes</h4>
@@ -151,27 +148,27 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-6 list-product-item">
+                    <li class="col col-md-3 col-xs-6 list-product-item">
                         <div class="product-card">
-                            <img src="/assets/img/product2.png" alt="Loose Knit 3/4 Sleeve" class="product-img">
+                            <img src="./assets/img/product2.png" alt="Loose Knit 3/4 Sleeve" class="product-img">
                             <div class="product-info">
                                 <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
                                 <span class="product-price normal-price">$119.99</span>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-6 list-product-item">
+                    <li class="col col-md-3 col-xs-6 list-product-item">
                         <div class="product-card">
-                            <img src="/assets/img/product3.png" alt="Basic Slim Fit T-Shirt" class="product-img">
+                            <img src="./assets/img/product3.png" alt="Basic Slim Fit T-Shirt" class="product-img">
                             <div class="product-info">
                                 <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
                                 <span class="product-price normal-price">$79.99</span>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-6 list-product-item">
+                    <li class="col col-md-3 col-xs-6 list-product-item">
                         <div class="product-card">
-                            <img src="/assets/img/product4.png" alt="Loose Textured T-Shirt" class="product-img">
+                            <img src="./assets/img/product4.png" alt="Loose Textured T-Shirt" class="product-img">
                             <div class="product-info">
                                 <h4 class="product-name">Loose Textured T-Shirt</h4>
                                 <span class="product-price normal-price">$119.99</span>
@@ -187,36 +184,36 @@
             <div class="container container-choose">
                 <h3 class="title txt-center">Why should you choose us?</h3>
                 <ul class="row list-benefit">
-                    <li class="col-md-3 col-xs-12 list-benefit-item">
+                    <li class="col col-md-3 col-xs-12 list-benefit-item">
                         <div class="benefit">
-                            <img src="/assets/img/benefit1.png" alt="Free Shipping" class="benefit-img">
+                            <img src="./assets/img/benefit1.png" alt="Free Shipping" class="benefit-img">
                             <div class="benefit-content">
                                 <h4 class="adventage-text">Free Shipping</h4>
                                 <p class="adventage-detail">All purchases over $199 are eligible for free shipping via USPS First Class Mail.</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-12 list-benefit-item">
+                    <li class="col col-md-3 col-xs-12 list-benefit-item">
                         <div class="benefit">
-                            <img src="/assets/img/benefit2.png" alt="Easy Payments" class="benefit-img">
+                            <img src="./assets/img/benefit2.png" alt="Easy Payments" class="benefit-img">
                             <div class="benefit-content">
                                 <h4 class="adventage-text yellow-text">Easy Payments</h4>
                                 <p class="adventage-detail">All payments are processed instantlyover a secure payment protocol.</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-12 list-benefit-item">
+                    <li class="col col-md-3 col-xs-12 list-benefit-item">
                         <div class="benefit">
-                            <img src="/assets/img/benefit3.png" alt="Money-Back Guarantee" class="benefit-img">
+                            <img src="./assets/img/benefit3.png" alt="Money-Back Guarantee" class="benefit-img">
                             <div class="benefit-content">
                                 <h4 class="adventage-text">Money-Back Guarantee</h4>
                                 <p class="adventage-detail">All purchases over $199 are eligible forfree shipping via USPS First Class Mail.If an item arrived damaged or you'vechanged your mind, you can send itback for a full refund.</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-12 list-benefit-item">
+                    <li class="col col-md-3 col-xs-12 list-benefit-item">
                         <div class="benefit">
-                            <img src="/assets/img/benefit4.png" alt="Finest Quality" class="benefit-img">
+                            <img src="./assets/img/benefit4.png" alt="Finest Quality" class="benefit-img">
                             <div class="benefit-content">
                                 <h4 class="adventage-text">Finest Quality</h4>
                                 <p class="adventage-detail">Designed to last, each of our products hasbeen crafted with the finest materials.</p>
@@ -230,10 +227,10 @@
         <section class="ptoday">
             <div class="container">
                 <h3 class="title txt-center">Products in today</h3>
-                <ul class="row list-product">
-                    <li class="col-md-3 col-xs-6 list-product-item">
+                <ul class="row list-product justify-content-between">
+                    <li class="col col-md-3 col-xs-6 list-product-item">
                         <div class="product-card">
-                            <img src="/assets/img/product1.png" alt="T-Shirt Summer Vibes" class="product-img">
+                            <img src="./assets/img/product1.png" alt="T-Shirt Summer Vibes" class="product-img">
                             <span class="badge">-30%</span>
                             <div class="product-info">
                                 <h4 class="product-name">T-Shirt Summer Vibes</h4>
@@ -244,27 +241,27 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-6 list-product-item">
+                    <li class="col col-md-3 col-xs-6 list-product-item">
                         <div class="product-card">
-                            <img src="/assets/img/product2.png" alt="Loose Knit 3/4 Sleeve" class="product-img">
+                            <img src="./assets/img/product2.png" alt="Loose Knit 3/4 Sleeve" class="product-img">
                             <div class="product-info">
                                 <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
                                 <span class="product-price normal-price">$119.99</span>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-6 list-product-item">
+                    <li class="col col-md-3 col-xs-6 list-product-item">
                         <div class="product-card">
-                            <img src="/assets/img/product3.png" alt="Basic Slim Fit T-Shirt" class="product-img">
+                            <img src="./assets/img/product3.png" alt="Basic Slim Fit T-Shirt" class="product-img">
                             <div class="product-info">
                                 <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
                                 <span class="product-price normal-price">$79.99</span>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-xs-6 list-product-item">
+                    <li class="col col-md-3 col-xs-6 list-product-item">
                         <div class="product-card">
-                            <img src="/assets/img/product4.png" alt="Loose Textured T-Shirt" class="product-img">
+                            <img src="./assets/img/product4.png" alt="Loose Textured T-Shirt" class="product-img">
                             <div class="product-info">
                                 <h4 class="product-name">Loose Textured T-Shirt</h4>
                                 <span class="product-price normal-price">$119.99</span>
@@ -278,10 +275,10 @@
         <section class="newsletter">
             <div class="container container-newsletter">
                 <div class="row">
-                    <div class="col-md-6 col-xs-12 newsletter-cap">
+                    <div class="col col-md-6 col-xs-12 newsletter-cap">
                         <p class="newsletter-text">Subscribe to our newsletter andreceive exclusive offers every week</p>
                     </div>
-                    <div class="col-md-6 col-xs-12 newsletter-subcribe">
+                    <div class="col col-md-6 col-xs-12 newsletter-subcribe">
                         <form action="" method="" class="subcribe-form">
                             <input type="email" name="email" class="email-subcribe" placeholder="Enter your email">
                             <button class="btn subcribe-btn">SUBSCRIBE</button>
@@ -295,9 +292,9 @@
     <footer>
         <div class="container container-footer">
             <div class="row footer-info">
-                <div class="col-md-5 col-xs-12 footer-intro">
+                <div class="col col-md-5 col-xs-12 footer-intro">
                     <div class="logo">
-                        <img src="/assets/img/logo.png" alt="E-shop" class="logo-img">
+                        <img src="./assets/img/logo.png" alt="E-shop" class="logo-img">
                     </div>
                     <div class="intro-content">
                         <p class="intro-text">
@@ -306,23 +303,23 @@
                     </div>
                     <ul class="footer-list-social">
                         <li class="list-social-item">
-                            <a href="#"><img src="/assets/img/fb.png" alt="facebook" class="social-icon"></a>
+                            <a href="#"><img src="./assets/img/fb.png" alt="facebook" class="social-icon"></a>
                         </li>
                         <li class="list-social-item">
-                            <a href="#"><img src="/assets/img/twt.png" alt="twitter" class="social-icon"></a>
+                            <a href="#"><img src="./assets/img/twt.png" alt="twitter" class="social-icon"></a>
                         </li>
                         <li class="list-social-item">
-                            <a href="#"><img src="/assets/img/linked.png" alt="linkedin" class="social-icon"></a>
+                            <a href="#"><img src="./assets/img/linked.png" alt="linkedin" class="social-icon"></a>
                         </li>
                         <li class="list-social-item">
-                            <a href="#"><img src="/assets/img/instagram.png" alt="instagram" class="social-icon"></a>
+                            <a href="#"><img src="./assets/img/instagram.png" alt="instagram" class="social-icon"></a>
                         </li>
                         <li class="list-social-item">
-                            <a href="#"><img src="/assets/img/youtube.png" alt="youtube" class="social-icon"></a>
+                            <a href="#"><img src="./assets/img/youtube.png" alt="youtube" class="social-icon"></a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-7 col-xs-12 footer-topic">
+                <div class="col col-md-7 col-xs-12 footer-topic">
                     <ul class="list-topic">
                         <li class="list-topic-item">
                             <h4 class="topic-text">Shopping online</h4>
