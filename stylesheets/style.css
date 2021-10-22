@@ -135,17 +135,18 @@ table {
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
   font-family: "Poppins", "sans-serif";
 }
 
 body {
-  font-size: 10px;
+  font-size: 1.4rem;
 }
 
 a {
   text-decoration: none;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 li {
@@ -153,8 +154,7 @@ li {
 }
 
 img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
 }
 
 h2 {
@@ -198,12 +198,12 @@ h4 {
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 2.7rem;
   }
 
   h4 {
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1.8rem;
   }
 }
@@ -212,7 +212,7 @@ h4 {
   cursor: pointer;
   font-style: normal;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
 .btn.form-btn {
@@ -252,7 +252,7 @@ h4 {
   }
 
   .btn.form-btn {
-    font-size: 13px;
+    font-size: 1.3rem;
     padding: 0.7rem 2rem;
   }
 }
@@ -260,7 +260,7 @@ h4 {
   border: none;
   background: #FFFFFF;
   border-radius: 6.1rem;
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 400;
   color: #A8A8A8;
   line-height: 1.9rem;
@@ -269,12 +269,12 @@ h4 {
 
 @media screen and (max-width: 479px) {
   .form-input {
-    font-size: 12px;
+    font-size: 1.2rem;
     padding: 1rem 1.2rem;
   }
 }
 .badge {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #FFFFFF;
   background-color: #FF0000;
@@ -318,7 +318,6 @@ h4 {
 }
 .benefit .benefit-img {
   width: 68px;
-  height: auto;
   display: block;
 }
 .benefit .benefit-content {
@@ -329,7 +328,7 @@ h4 {
   padding-bottom: 1.6rem;
 }
 .benefit .benefit-content p.adventage-detail {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.1rem;
   color: #808080;
@@ -348,7 +347,7 @@ h4 {
     padding-bottom: 0.8rem;
   }
   .benefit .benefit-content p.adventage-detail {
-    font-size: 10px;
+    font-size: 1rem;
     line-height: 1.5rem;
   }
 }
@@ -510,7 +509,6 @@ header .f-row {
 
 .logo .logo-img {
   width: 140px;
-  height: auto;
   display: block;
 }
 
@@ -520,7 +518,7 @@ header .f-row {
 }
 .menu ul.list-menu li.menu-item a {
   color: #FBB03B;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 4.8rem;
 }
@@ -531,7 +529,6 @@ header .f-row {
 }
 .header-function ul.list-function li.function-item .function-img {
   width: 24px;
-  height: auto;
   display: block;
 }
 
@@ -546,7 +543,6 @@ header .f-row {
 
   .logo .logo-img {
     width: 128px;
-    height: auto;
   }
 
   .menu {
@@ -555,7 +551,6 @@ header .f-row {
 
   .header-function ul.list-function li.function-item .function-img {
     width: 20px;
-    height: auto;
     filter: brightness(0) saturate(100%);
   }
 }
@@ -618,7 +613,6 @@ footer .container-footer .footer-info {
   padding-bottom: 4.8rem;
 }
 footer p.footer-text {
-  font-size: 12px;
   font-weight: 400;
   color: #FFFFFF;
   border-top: 1px solid #FFFFFF;
@@ -630,7 +624,7 @@ footer p.footer-text {
 }
 .footer-intro .intro-content p.intro-text {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-top: 2.4rem;
   color: #FFFFFF;
   line-height: 2.1rem;
@@ -660,7 +654,7 @@ footer p.footer-text {
   padding: 0.8rem 0;
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 150%;
 }
 .footer-topic ul.list-topic li.list-topic-item:not(:last-child) {
@@ -1373,7 +1367,7 @@ footer p.footer-text {
 }
 .banner .container-banner .shop-now .sn-btn {
   text-decoration: underline;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 3.6rem;
   padding-left: 6rem;
@@ -1396,7 +1390,6 @@ footer p.footer-text {
 
 .adventage .adventage-img {
   width: 36px;
-  height: auto;
   vertical-align: top;
 }
 .adventage .adventage-content {
@@ -1406,11 +1399,10 @@ footer p.footer-text {
 }
 .adventage .adventage-content h4.adventage-text {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 2;
 }
 .adventage .adventage-content p.adventage-detail {
-  font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
   color: #A8A8A8;
@@ -1441,6 +1433,7 @@ footer p.footer-text {
   height: 100%;
 }
 .collection-content .collection-img {
+  height: 100%;
   z-index: 1;
 }
 .collection-content .badge-content {
@@ -1454,7 +1447,7 @@ footer p.footer-text {
   z-index: 1;
 }
 .collection-content .collection-item-content h3.collection-item-text {
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 3.6rem;
   font-weight: 400;
   min-height: 7.3rem;
@@ -1496,7 +1489,7 @@ ul.list-product {
   position: relative;
 }
 .newsletter .container-newsletter .newsletter-cap p.newsletter-text {
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 3.6rem;
   font-weight: 400;
   color: #FFFFFF;
@@ -1520,7 +1513,7 @@ ul.list-product {
 
 @media screen and (max-width: 479px) {
   .product-price {
-    font-size: 10px;
+    font-size: 1rem;
     line-height: 1.5rem;
   }
 
@@ -1535,7 +1528,7 @@ ul.list-product {
   }
   .banner .container-banner .shop-now .sn-btn {
     text-decoration: underline;
-    font-size: 14px;
+    font-size: 1.4rem;
     padding-left: 4.8rem;
   }
 
@@ -1545,7 +1538,6 @@ ul.list-product {
 
   .adventage .adventage-img {
     width: 36px;
-    height: auto;
     vertical-align: top;
   }
   .adventage .adventage-content {
@@ -1554,10 +1546,10 @@ ul.list-product {
     padding-left: 1.6rem;
   }
   .adventage .adventage-content h4.adventage-text {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
   .adventage .adventage-content p.adventage-detail {
-    font-size: 10px;
+    font-size: 1rem;
   }
 
   .collection-content .collection-item-content {
@@ -1567,7 +1559,7 @@ ul.list-product {
     bottom: 1.6rem;
   }
   .collection-content .collection-item-content h3.collection-item-text {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 2.1rem;
     min-height: 4rem;
   }
@@ -1589,7 +1581,7 @@ ul.list-product {
   }
 
   .newsletter .container-newsletter .newsletter-cap p.newsletter-text {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 2.1rem;
     padding-right: 12rem;
   }

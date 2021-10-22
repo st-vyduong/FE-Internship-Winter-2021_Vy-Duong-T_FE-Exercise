@@ -4,22 +4,22 @@
 	box-sizing: border-box;
 }
 html {
-	font-size: map-get($font-size, xxxs);
+	font-size: 62.5%;
 	font-family: $font-body;
 }
 body {
-	font-size: map-get($font-size, xxxs);
+	font-size: map-get($font-size, sm);
 }
 a {
 	text-decoration: none;
 	color: map-get($color, white);
+	cursor: pointer;
 }
 li {
 	display: inline;
 }
 img {
-	width: 100%;
-	height: 100%;
+	max-width: 100%;
 }
 h2 {
 	font-size: 7.2rem;

@@ -7,7 +7,6 @@ footer {
     }
   }
   p.footer-text {
-    font-size: map-get($font-size, xxs);
     font-weight: map-get($font-weight, medium);
     color: map-get($color, white);
     border-top: 1px solid map-get($color, white);
