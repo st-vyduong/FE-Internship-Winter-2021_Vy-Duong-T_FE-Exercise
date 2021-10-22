@@ -116,12 +116,12 @@
     bottom: 5.3rem;
     z-index: 1;
     h3.collection-item-text {
-      font-size:  map-get($font-size, xl);
+      font-size: map-get($font-size, xl);
       line-height: 3.6rem;
-      font-weight:  map-get($font-weight, medium);
+      font-weight: map-get($font-weight, medium);
       min-height: 7.3rem;
       margin-bottom: 2rem;
-      color:  map-get($color, white);
+      color: map-get($color, white);
     }
   }
 }

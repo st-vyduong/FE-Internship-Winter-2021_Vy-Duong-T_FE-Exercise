@@ -22,22 +22,22 @@ img {
 	max-width: 100%;
 }
 h2 {
-	font-size: 7.2rem;
+	font-size: map-get($font-size, xxxl);
 	font-weight: map-get($font-weight, bold);
-	color: #fff;
+	color: map-get($color, white);
 	line-height: 101.5%;
 }
 h3 {
-	font-size: 3.2rem;
+	font-size: map-get($font-size, xxl);
 	font-weight: map-get($font-weight, regular);
-	color: #333333;
+	color: map-get($color, grey-a);
 	line-height: 4.8rem;
 }
 h4 {
 	font-weight: map-get($font-weight, regular);
-	font-size: 1.6rem;
+	font-size: map-get($font-size, normal);
 	line-height: 2.4rem;
-	color: #333333;
+	color: map-get($color, grey-a);
 }
 .justify-content-between {
 	justify-content: space-between;
