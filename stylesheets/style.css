@@ -1355,7 +1355,7 @@ footer p.footer-text {
 }
 
 .banner {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%), url("../../assets/img/banner.png");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%), url("./../assets/img/banner.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -1367,7 +1367,7 @@ footer p.footer-text {
   display: block;
 }
 .banner .container-banner .shop-now {
-  background: url("../../assets/img/shop_now.png") no-repeat;
+  background: url("./../assets/img/shop_now.png") no-repeat;
   background-size: 36px;
   margin-bottom: 17rem;
 }
@@ -1491,7 +1491,7 @@ ul.list-product {
 }
 
 .newsletter {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.63) 33.28%, rgba(0, 0, 0, 0) 94.05%), url("../../assets/img/newsletter.png") no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.63) 33.28%, rgba(0, 0, 0, 0) 94.05%), url("./../assets/img/newsletter.png") no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1530,7 +1530,7 @@ ul.list-product {
     margin-bottom: 1.6rem;
   }
   .banner .container-banner .shop-now {
-    background: url("../../assets/img/shop_now.png") no-repeat;
+    background: url("./../assets/img/shop_now.png") no-repeat;
     background-size: 32px;
   }
   .banner .container-banner .shop-now .sn-btn {
