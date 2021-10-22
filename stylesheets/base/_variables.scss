@@ -28,4 +28,11 @@ $font-weight: (
     medium: 400,
     bold: 700
 );
+$breakpoints: (
+    sm: 575.98px,
+    md: 767.98px,
+    lg: 991.98px,
+    xl: 1199.98px,
+    xxl: 1399.98px
+);
 $font-body: 'Poppins', 'sans-serif';

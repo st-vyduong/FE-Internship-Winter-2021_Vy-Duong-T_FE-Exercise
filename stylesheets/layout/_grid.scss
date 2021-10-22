@@ -5,10 +5,11 @@
 }
 .row {
     display: flex;
-    flex-wrap: nowrap;
-    padding: 0 -1rem;
+    margin: 0 -1rem;
 }
-
+.col {
+    padding: 0 1rem;
+}
 $sizeList: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 @each $size in $sizeList {
     .col-md-#{$size} {
@@ -21,17 +22,6 @@ $sizeList: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 .row.center-y {
     align-items: center;
 }
-main {
-    .list-collection {
-        column-gap: 2rem;
-    }
-    .list-product {
-        column-gap: 2rem;
-    }
-    .list-benefit {
-        column-gap: 4.8rem;
-    }
-}
 
 @media screen and (max-width: 479px) {
     .container {
@@ -42,17 +32,16 @@ main {
         flex-wrap: wrap;
         margin: 0 -0.4rem;
     }
+    .col {
+        padding: 0 0.4rem;
+    }
     @each $size in $sizeList {
         .col-xs-#{$size} {
             @include col-width($size);
         }
     }
     main {
-        .list-collection, .list-product {
-            column-gap: 0;
-        }
         .list-benefit {
-            column-gap: 0;
             row-gap: 1.6rem;
         }
     }

@@ -1,21 +1,21 @@
 .benefit {
+    width: 85%;
     .benefit-img {
         width: 68px;
-        height: 68px;
+        height: auto;
         display: block;
     }
     .benefit-content {
         padding-top: 4.8rem;
         h4.adventage-text {
             font-weight: map-get($font-weight, bold);
-            font-size: map-get($font-size, normal);
-            line-height: 2;
+            padding-bottom: 1.6rem;
         }
         p.adventage-detail {
             font-size: map-get($font-size, sm);
             font-weight: map-get($font-weight, medium);
-            line-height: 1.5;
-            color: map-get($color, grey-c);
+            line-height: 2.1rem;
+            color: map-get($color, grey-b);
         }
     }
 }
@@ -23,15 +23,15 @@
     .benefit {
         display: flex;
         align-items: center;
-        font-size: map-get($font-size, xxxs);
         .benefit-content {
             padding-left: 1.6rem;
             padding-top: 0;
             h4.adventage-text {
-                font-size: map-get($font-size, xxs);
+                padding-bottom: 0.8rem;
             }
             p.adventage-detail {
                 font-size: map-get($font-size, xxxs);
+                line-height: 1.5rem;
             }
         }
     }
