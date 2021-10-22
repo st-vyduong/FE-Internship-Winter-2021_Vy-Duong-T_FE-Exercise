@@ -31,24 +31,46 @@ li {
 .yellow-text {
     color: #FBB03B;
 }
-
+h2 {
+    font-size: 72px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 101.5%;
+}
+h3 {
+    font-size: 32px;
+    font-weight: lighter;
+    color: #333333;
+    line-height: 48px;
+}
+h4 {
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+.f-row {
+    display: flex; 
+    flex-direction: row;
+}
 header {
-    height: 48px;
-    margin-top: 48px;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
+    padding: 30px 0;
 }
-header .logo {
-    height: 48px;
+header .f-row {
+    align-items: center;
 }
 .logo .logo-img {
     width: 140px;
-    height: 35px;
+    height: auto;
+    display: block;
 }
-header li.menu-item {
-    margin: 0 70px;
+header ul.list-menu {
+    display: flex;
+    gap: 96px;
 }
 header li.menu-item a {
     color: #FBB03B;
@@ -56,20 +78,17 @@ header li.menu-item a {
     font-weight: bold;
     line-height: 48px;
 }
-header .header-function,
-header .logo {
-    display: flex;
-    align-items: center;
-}
 header .header-function {
     height: 100%;
 }
+header ul.list-function {
+    display: flex;
+    gap: 24px;
+}
 .header-function .function-img {
     width: 24px;
-    height: 24px;
-}
-.function-item:not(:last-child) {
-    padding-right: 24px;
+    height: auto;
+    display: block;
 }
 main {
     margin-top: -96px;
@@ -85,11 +104,7 @@ main .container-banner {
     padding-top: 222px;
     margin-bottom: 24px;
 }
-.container-banner h2.title-text {
-    font-size: 72px;
-    font-weight: bold;
-    color: #fff;
-}
+
 .container-banner span.title-span {
     color: #FBB03B;
     display: block;
@@ -99,7 +114,7 @@ main .container-banner {
     background-size: 36px;
     margin-bottom: 170px;
 }
-main .sn-btn {
+.sn-btn {
     text-decoration: underline;
     font-size: 24px;
     font-weight: bold;
@@ -130,12 +145,17 @@ main .container-pills {
     border-radius: 0 70px 0 0;
     margin: 0;
 }
+.pills .adventage-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+}
 main .list-adventages {
     padding-bottom: 24px;
 }
 main .adventage-img {
     width: 36px;
-    height: 36px;
+    height: auto;
     vertical-align: top;
 }
 main .adventage-content {
@@ -145,8 +165,6 @@ main .adventage-content {
 }
 main .adventage-text {
     font-weight: bold;
-    font-size: 14px;
-    line-height: 2;
 }
 main .adventage-detail {
     font-size: 12px;
@@ -164,19 +182,23 @@ main .collection-content {
     width: 100%;
     height: 100%;
 }
-main .collection-content::after {
-    content: "";
+.overlay {
+    position: relative;
+    
+}
+.overlay::after {
     position: absolute;
+    content: "";
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    display: block;
+    z-index: 0;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0.7;
 }
-main .collection-content > * {
-    z-index: 100;
-}
+
 main .collection-img {
     width: 100%;
     height: 100%;
@@ -184,13 +206,14 @@ main .collection-img {
 }
 main .collection-item-content {
     position: absolute;
-    top: 50%;
-    left: 8%;
-    height: 50%;
+    left: 40px;
+    right: 40px;
+    bottom: 53px;
+    z-index: 1;
 }
 .collection-item-content .collection-item-text {
-    max-height: 60%;
-    padding-bottom: 55px;
+    min-height: 73px;
+    margin-bottom: 20px;
 }
 .badge {
     font-size: 12px;
@@ -201,23 +224,20 @@ main .collection-item-content {
     padding: 5px 10px;
     border-radius: 15px;
 }
-.collection .badge {
-    position: absolute;
-    top: 40%;
-    left: 8%;
+.collection .badge-content {
+    margin-bottom: 20px;
 }
 .collection-item-text,
 .newsletter-text {
     font-size: 24px;
     line-height: 36px;
-    font-weight: lighter;
     color: #FFFFFF;
 }
 .newsletter-text {
     width: 80%;
 }
-.show-btn,
-.collection-btn {
+.btn.show-btn,
+.btn.collection-btn {
     padding: 16px 20px;
     border-radius: 30px;
     font-size: 13px;
@@ -233,7 +253,7 @@ main .selected-header {
     display: flex;
     justify-content: space-between;
 }
-.selected .show-btn {
+.btn.show-btn {
     border: 1px solid #C4C4C4;
     position: absolute;
     top: 0;
@@ -242,18 +262,14 @@ main .selected-header {
 main .list-product {
     padding-top: 36px;
 }
-.title {
-    font-size: 32px;
-    font-weight: lighter;
-    color: #333333;
-}
+
 main .product-card {
     width: 100%;
     height: 100%;
     padding-bottom: 12px;
     position: relative;
 }
-main .badge {
+.product-card .badge {
     position: absolute;
     top: 6%;
     left: 6%;
@@ -293,6 +309,7 @@ main .choose {
     margin-top: 48px;
     background-color: #F7F7F7;
 }
+
 main .container-choose {
     padding-top: 48px;
     padding-bottom: 48px;
@@ -302,7 +319,7 @@ main .container-choose {
 }
 .benefit-img {
     width: 68px;
-    height: 68px;
+    height: auto;
     display: block;
 }
 .benefit-content {
@@ -338,12 +355,12 @@ main .email-subcribe {
     color: #ABABAB;
     padding: 14px 24px;
 }
-main .subcribe-btn {
+.btn.subcribe-btn {
     font-style: normal;
     font-weight: bold;
     font-size: 13px;
     color: #333333;
-    padding: 8px 20px;
+    padding: 8px 36px;
     border-radius: 56px;
     background-color: #FBB03B;
 }
@@ -386,8 +403,6 @@ footer .footer-list-social {
 footer .topic-text {
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
     color: #FFFFFF;
     padding-bottom: 8px;
 }
@@ -430,8 +445,8 @@ footer .footer-author {
     .product-price {
         font-size: 10px;
     }
-    .show-btn,
-    .collection-btn {
+    .btn.show-btn,
+    .btn.collection-btn {
         padding: 5px 10px;
         border-radius: 30px;
         font-size: 10px;
@@ -439,10 +454,10 @@ footer .footer-author {
     .collection-item-text, .newsletter-text {
         font-size: 14px;
     }
-    .collection .collection-btn {
+    .btn.collection-btn {
         margin-top: 5%;
     }
-    .selected .show-btn  {
+    .btn.show-btn  {
         right: 4px;
     }
     header {
@@ -470,11 +485,11 @@ footer .footer-author {
     }
     .header-function .function-img {
         width: 20px;
-        height: 20px;
+        height: auto;
     }
     .logo .logo-img {
         width: 128px;
-        height: 32px;
+        height: auto;
     }
     main {
         margin-top: -72px;
@@ -489,15 +504,12 @@ footer .footer-author {
         background-size: 32px;
         margin-bottom: 0;
     }
-    main .sn-btn {
+    .sn-btn {
         font-size: 14px;
         padding-left: 48px;
     }
     .pills {
         display: none;
-    }
-    main .list-collection-item:not(:first-child) {
-        width: calc(50% - 4px);
     }
     .banner .container-title {
         width: 100%;

@@ -6,7 +6,10 @@
 .row {
     display: flex;
     flex-wrap: nowrap;
-    padding: 0 -10px;
+    margin: 0 -10px;
+}
+.col {
+    padding: 0 10px;
 }
 .col-md-12 {
     max-width: 100%;
@@ -44,13 +47,6 @@
 .col-md-1 {
     max-width: 8.333333%;
 }
-main .list-collection,
-main .list-product {
-    column-gap: 20px;
-}
-main .list-benefit {
-    column-gap: 48px;
-}
 
 @media screen and (max-width: 479px) {
     .container {
@@ -60,6 +56,9 @@ main .list-benefit {
     .row {
         flex-wrap: wrap;
         margin: 0 -4px;
+    }
+    .col {
+        padding: 0 4px;
     }
     .col-xs-12 {
         max-width: 100%;
@@ -96,11 +95,6 @@ main .list-benefit {
     }
     .col-xs-1 {
         max-width: 8.333333%;
-    }
-    main .list-collection,
-    main .list-product,
-    main .list-benefit {
-        column-gap: 0;
     }
     .collection .row,
     .ptoday .row,
