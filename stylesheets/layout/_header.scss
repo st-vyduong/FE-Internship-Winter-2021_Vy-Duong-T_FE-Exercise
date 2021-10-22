@@ -1,77 +1,77 @@
 header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 99;
-    padding: 3rem 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  padding: 3rem 0;
 }
 header .f-row {
-    align-items: center;
+  align-items: center;
 }
 .logo {
-    .logo-img {
-        width: 140px;
-        height: auto;
-        display: block;
-    }
+  .logo-img {
+    width: 140px;
+    height: auto;
+    display: block;
+  }
 }
 .menu {
-    ul.list-menu {
-        display: flex;
-        gap: 9.6rem;
-        li.menu-item {
-            a {
-                color: map-get($color, primary);
-                font-size: map-get($font-size, lg);
-                font-weight: map-get($font-weight, bold);
-                line-height: 4.8rem;
-            }
-        }
+  ul.list-menu {
+    display: flex;
+    gap: 9.6rem;
+    li.menu-item {
+      a {
+        color: map-get($color, primary);
+        font-size: map-get($font-size, lg);
+        font-weight: map-get($font-weight, bold);
+        line-height: 4.8rem;
+      }
     }
+  }
 }
 .header-function {
-    ul.list-function {
-        display: flex;
-        gap: 24px;
-        li.function-item {
-            .function-img {
-                width: 24px;
-                height: auto;
-                display: block;
-            }
-        }
+  ul.list-function {
+    display: flex;
+    gap: 24px;
+    li.function-item {
+      .function-img {
+        width: 24px;
+        height: auto;
+        display: block;
+      }
     }
+  }
 }
 @media screen and (max-width: map-get($breakpoints, sm)) {
-    header {
-        background-color: map-get($color, white);
-        padding: 2rem;
-        .container-header {
-            .logo {
-                .logo-img {
-                    filter: brightness(0) saturate(100%);
-                }
-            }
-        }
-    }
-    .logo {
+  header {
+    background-color: map-get($color, white);
+    padding: 2rem;
+    .container-header {
+      .logo {
         .logo-img {
-            width: 128px;
-            height: auto;
+          filter: brightness(0) saturate(100%);
         }
+      }
     }
-    .menu {
-        display: none;
+  }
+  .logo {
+    .logo-img {
+      width: 128px;
+      height: auto;
     }
-    .header-function {
-        ul.list-function {
-            li.function-item {
-                .function-img {
-                    width: 20px;
-                    height: auto;
-                    filter: brightness(0) saturate(100%);
-                }
-            }
+  }
+  .menu {
+    display: none;
+  }
+  .header-function {
+    ul.list-function {
+      li.function-item {
+        .function-img {
+          width: 20px;
+          height: auto;
+          filter: brightness(0) saturate(100%);
         }
+      }
     }
+  }
 }

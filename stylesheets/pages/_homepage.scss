@@ -1,284 +1,284 @@
 .product-price {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2rem;
-    line-height: 3rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 .discount-price {
-    color: map-get($color, red);
+  color: map-get($color, red);
 }
 .basic-price {
-    color: map-get($color, grey-d);
+  color: map-get($color, grey-d);
 }
 .normal-price {
-    color: map-get($color, grey-a);
+  color: map-get($color, grey-a);
 }
 .banner {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%), url("./../assets/img/banner.png");
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    .container-banner {
-        h2.title-text {
-            margin-bottom: 2.4rem;
-            span.title-span {
-                display: block;
-            }
-        }
-        .shop-now {
-            background: url("./../assets/img/shop_now.png") no-repeat;
-            background-size: 36px;
-            margin-bottom: 17rem;
-            .sn-btn {
-                text-decoration: underline;
-                font-size: map-get($font-size, xl);
-                font-weight: map-get($font-weight, bold);
-                line-height: 3.6rem;
-                padding-left: 6rem;
-            }
-        }
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%), url("./../assets/img/banner.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  .container-banner {
+    h2.title-text {
+      margin-bottom: 2.4rem;
+      span.title-span {
+        display: block;
+      }
     }
+    .shop-now {
+      background: url("./../assets/img/shop_now.png") no-repeat;
+      background-size: 36px;
+      margin-bottom: 17rem;
+      .sn-btn {
+        text-decoration: underline;
+        font-size: map-get($font-size, xl);
+        font-weight: map-get($font-weight, bold);
+        line-height: 3.6rem;
+        padding-left: 6rem;
+      }
+    }
+  }
 }
 .pills {
-    &:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 80%;
-        height: 125px;
-        background-color: map-get($color, white);
-        border-radius: 0 70px 0 0;
-    }
-    ul.list-adventages {
-        padding-bottom: 2.4rem;
-        position: relative;
-    }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 125px;
+    background-color: map-get($color, white);
+    border-radius: 0 70px 0 0;
+  }
+  ul.list-adventages {
+    padding-bottom: 2.4rem;
+    position: relative;
+  }
 }
 .adventage {
-    .adventage-img {
-        width: 36px;
-        height: auto;
-        vertical-align: top;
+  .adventage-img {
+    width: 36px;
+    height: auto;
+    vertical-align: top;
+  }
+  .adventage-content {
+    display: inline-block;
+    width: 70%;
+    padding-left: 1.6rem;
+    h4.adventage-text {
+      font-weight: map-get($font-weight, bold);
+      font-size: map-get($font-size, sm);
+      line-height: 2;
     }
-    .adventage-content {
-        display: inline-block;
-        width: 70%;
-        padding-left: 1.6rem;
-        h4.adventage-text {
-            font-weight: map-get($font-weight, bold);
-            font-size: map-get($font-size, sm);
-            line-height: 2;
-        }
-        p.adventage-detail {
-            font-size: map-get($font-size, xxs);
-            font-weight: map-get($font-weight, medium);
-            line-height: 1.5;
-            color: map-get($color, grey-c);
-        }
+    p.adventage-detail {
+      font-size: map-get($font-size, xxs);
+      font-weight: map-get($font-weight, medium);
+      line-height: 1.5;
+      color: map-get($color, grey-c);
     }
+  }
 }
 .overlay {
-    position: relative;
-    &::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0.7;
-    }
-    
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+  }
+  
 }
 .collection {
-    ul.list-collection {
-        li.list-collection-item {
-            position: relative;
-        }
+  ul.list-collection {
+    li.list-collection-item {
+      position: relative;
     }
+  }
 }
 .collection-content {
-    width: 100%;
-    height: 100%;
-    .collection-img {
-        z-index: 1;
+  width: 100%;
+  height: 100%;
+  .collection-img {
+    z-index: 1;
+  }
+  .badge-content {
+    margin-bottom: 2rem;
+  }
+  .collection-item-content {
+    position: absolute;
+    left: 4rem;
+    right: 4rem;
+    bottom: 5.3rem;
+    z-index: 1;
+    h3.collection-item-text {
+      font-size:  map-get($font-size, xl);
+      line-height: 3.6rem;
+      font-weight:  map-get($font-weight, medium);
+      min-height: 7.3rem;
+      margin-bottom: 2rem;
+      color:  map-get($color, white);
     }
-    .badge-content {
-        margin-bottom: 2rem;
-    }
-    .collection-item-content {
-        position: absolute;
-        left: 4rem;
-        right: 4rem;
-        bottom: 5.3rem;
-        z-index: 1;
-        h3.collection-item-text {
-            font-size:  map-get($font-size, xl);
-            line-height: 3.6rem;
-            font-weight:  map-get($font-weight, medium);
-            min-height: 7.3rem;
-            margin-bottom: 2rem;
-            color:  map-get($color, white);
-        }
-    }
+  }
 }
 .selected {
-    .container-selected {
-        position: relative;
-        .show-btn {
-            position: absolute;
-            top: 0;
-            right: 1rem;
-        }
+  .container-selected {
+    position: relative;
+    .show-btn {
+      position: absolute;
+      top: 0;
+      right: 1rem;
     }
+  }
 }
 ul.list-product {
-    padding-top: 3.6rem;
+  padding-top: 3.6rem;
 }
 .choose {
-    background-color: map-get($color, grey-e);
-    .container-choose {
-        padding-top: 4.8rem;
-        padding-bottom: 5.3rem;
-        ul.list-benefit {
-            padding-top: 4.8rem;
-        }
+  background-color: map-get($color, grey-e);
+  .container-choose {
+    padding-top: 4.8rem;
+    padding-bottom: 5.3rem;
+    ul.list-benefit {
+      padding-top: 4.8rem;
     }
+  }
 }
 .ptoday {
-    h3.title {
-        text-align: left;
-    }
+  h3.title {
+    text-align: left;
+  }
 }
 .newsletter {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.63) 33.28%, rgba(0, 0, 0, 0) 94.05%), url("./../assets/img/newsletter.png") no-repeat;
-    background-size: cover;
-    position: relative;
-    .container-newsletter {
-        .newsletter-cap {
-            p.newsletter-text {
-                font-size: map-get($font-size, xl);
-                line-height: 3.6rem;
-                font-weight: map-get($font-weight, medium);
-                color: map-get($color, white);
-            }
-        }
-        .newsletter-subcribe {
-            flex-grow: 1;
-            .subcribe-form {
-                align-items: center;
-                height: 100%;
-                .form-input {
-                    height: fit-content;
-                    width: 100%;
-                    margin-right: 4rem;
-                }
-                .subcribe-btn {
-                    height: fit-content;
-                    width: 100%;
-                }
-            }
-        }
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.63) 33.28%, rgba(0, 0, 0, 0) 94.05%), url("./../assets/img/newsletter.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  .container-newsletter {
+    .newsletter-cap {
+      p.newsletter-text {
+        font-size: map-get($font-size, xl);
+        line-height: 3.6rem;
+        font-weight: map-get($font-weight, medium);
+        color: map-get($color, white);
+      }
     }
+    .newsletter-subcribe {
+      flex-grow: 1;
+      .subcribe-form {
+        align-items: center;
+        height: 100%;
+        .form-input {
+          height: fit-content;
+          width: 100%;
+          margin-right: 4rem;
+        }
+        .subcribe-btn {
+          height: fit-content;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 479px) {
-    .product-price {
+  .product-price {
+    font-size: map-get($font-size, xxxs);
+    line-height: 1.5rem;
+  }
+  .banner {
+    .container-banner {
+      h2.title-text {
+        font-size: 4.8rem;
+        font-weight: map-get($font-weight, bold);
+        margin-bottom: 1.6rem;
+      }
+      .shop-now {
+        background: url("./../assets/img/shop_now.png") no-repeat;
+        background-size: 32px;
+        .sn-btn {
+          text-decoration: underline;
+          font-size: map-get($font-size, sm);
+          padding-left: 4.8rem;
+        }
+      }
+    }
+  }
+  .pills {
+    display: none;
+  }
+  .adventage {
+    .adventage-img {
+      width: 36px;
+      height: auto;
+      vertical-align: top;
+    }
+    .adventage-content {
+      display: inline-block;
+      width: 70%;
+      padding-left: 1.6rem;
+      h4.adventage-text {
+        font-size: map-get($font-size, xxs);
+      }
+      p.adventage-detail {
         font-size: map-get($font-size, xxxs);
-        line-height: 1.5rem;
+      }
     }
-    .banner {
-        .container-banner {
-            h2.title-text {
-                font-size: 4.8rem;
-                font-weight: map-get($font-weight, bold);
-                margin-bottom: 1.6rem;
-            }
-            .shop-now {
-                background: url("./../assets/img/shop_now.png") no-repeat;
-                background-size: 32px;
-                .sn-btn {
-                    text-decoration: underline;
-                    font-size: map-get($font-size, sm);
-                    padding-left: 4.8rem;
-                }
-            }
+  }
+  .collection-content {
+    .collection-item-content {
+      position: absolute;
+      left: 1.6rem;
+      right: 1.6rem;
+      bottom: 1.6rem;
+      h3.collection-item-text {
+        font-size: map-get($font-size, sm);
+        line-height: 2.1rem;
+        min-height: 4rem;
+      }
+    }
+  }
+  .selected {
+    .show-btn {
+      right: 0.4rem;
+    }
+  }
+  ul.list-product {
+    padding-top: 1.6rem;
+  }
+  .choose {
+    .container-choose {
+      padding-top: 2.4rem;
+      padding-bottom: 2.4rem;
+      ul.list-benefit {
+        padding-top: 3.6rem;
+      }
+    }
+  }
+  .newsletter {
+    .container-newsletter {
+      .newsletter-cap {
+        p.newsletter-text {
+          font-size: map-get($font-size, sm);
+          line-height: 2.1rem;
+          padding-right: 12rem;
         }
-    }
-    .pills {
-        display: none;
-    }
-    .adventage {
-        .adventage-img {
-            width: 36px;
-            height: auto;
-            vertical-align: top;
+      }
+      .newsletter-subcribe {
+        flex-grow: 1;
+        .subcribe-form {
+          display: block;
+          padding-top: 2.4rem;
+          .form-input {
+            margin-bottom: 1.6rem;
+            line-height: 1.8rem;
+          }
         }
-        .adventage-content {
-            display: inline-block;
-            width: 70%;
-            padding-left: 1.6rem;
-            h4.adventage-text {
-                font-size: map-get($font-size, xxs);
-            }
-            p.adventage-detail {
-                font-size: map-get($font-size, xxxs);
-            }
-        }
+      }
     }
-    .collection-content {
-        .collection-item-content {
-            position: absolute;
-            left: 1.6rem;
-            right: 1.6rem;
-            bottom: 1.6rem;
-            h3.collection-item-text {
-                font-size: map-get($font-size, sm);
-                line-height: 2.1rem;
-                min-height: 4rem;
-            }
-        }
-    }
-    .selected {
-        .show-btn {
-            right: 0.4rem;
-        }
-    }
-    ul.list-product {
-        padding-top: 1.6rem;
-    }
-    .choose {
-        .container-choose {
-            padding-top: 2.4rem;
-            padding-bottom: 2.4rem;
-            ul.list-benefit {
-                padding-top: 3.6rem;
-            }
-        }
-    }
-    .newsletter {
-        .container-newsletter {
-            .newsletter-cap {
-                p.newsletter-text {
-                    font-size: map-get($font-size, sm);
-                    line-height: 2.1rem;
-                    padding-right: 12rem;
-                }
-            }
-            .newsletter-subcribe {
-                flex-grow: 1;
-                .subcribe-form {
-                    display: block;
-                    padding-top: 2.4rem;
-                    .form-input {
-                        margin-bottom: 1.6rem;
-                        line-height: 1.8rem;
-                    }
-                }
-            }
-        }
-    }
+  }
 }

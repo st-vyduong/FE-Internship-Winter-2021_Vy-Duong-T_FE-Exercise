@@ -1,56 +1,56 @@
 .container {
-    padding: 0 1rem;
-    max-width: 1170px;
-    margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 .row {
-    display: flex;
-    margin: 0 -1rem;
+  display: flex;
+  margin: 0 -1rem;
 }
 .col {
-    padding: 0 1rem;
+  padding: 0 1rem;
 }
 $sizeList: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 @each $size in $sizeList {
-    .col-md-#{$size} {
-        @include col-width($size);
-    }
+  .col-md-#{$size} {
+    @include col-width($size);
+  }
 }
 .row.center-x { 
-    justify-content: center;
+  justify-content: center;
 }
 .row.center-y {
-    align-items: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 479px) {
-    .container {
-        padding: 0 0.4rem;
-        max-width: 335px;
+  .container {
+    padding: 0 0.4rem;
+    max-width: 335px;
+  }
+  .row {
+    flex-wrap: wrap;
+    margin: 0 -0.4rem;
+  }
+  .col {
+    padding: 0 0.4rem;
+  }
+  @each $size in $sizeList {
+    .col-xs-#{$size} {
+      @include col-width($size);
     }
+  }
+  main {
+    .list-benefit {
+      row-gap: 1.6rem;
+    }
+  }
+  .collection,
+  .ptoday,
+  .selected {
     .row {
-        flex-wrap: wrap;
-        margin: 0 -0.4rem;
+      row-gap: 0.8rem;
     }
-    .col {
-        padding: 0 0.4rem;
-    }
-    @each $size in $sizeList {
-        .col-xs-#{$size} {
-            @include col-width($size);
-        }
-    }
-    main {
-        .list-benefit {
-            row-gap: 1.6rem;
-        }
-    }
-    .collection,
-    .ptoday,
-    .selected {
-        .row {
-            row-gap: 0.8rem;
-        }
-        
-    }
+    
+  }
 }
