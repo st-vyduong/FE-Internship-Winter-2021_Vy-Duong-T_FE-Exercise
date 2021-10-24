@@ -4,9 +4,9 @@ header {
   top: 0;
   z-index: 99;
   padding: 3rem 0;
-}
-header .f-row {
-  align-items: center;
+  .f-row {
+    align-items: center;
+  }
 }
 .logo {
   .logo-img {
@@ -15,35 +15,43 @@ header .f-row {
   }
 }
 .menu {
-  ul.list-menu {
-    display: flex;
-    gap: 9.6rem;
-    li.menu-item {
-      a {
-        color: map-get($color, primary);
-        font-size: map-get($font-size, lg);
-        font-weight: map-get($font-weight, bold);
-        line-height: 4.8rem;
+  ul {
+    &.list-menu {
+      display: flex;
+      gap: 9.6rem;
+      li {
+        &.menu-item {
+          a {
+            color: map-get($color, primary);
+            font-size: map-get($font-size, lg);
+            font-weight: map-get($font-weight, bold);
+            line-height: 4.8rem;
+          }
+        }
       }
     }
   }
 }
 .header-function {
-  ul.list-function {
-    display: flex;
-    gap: 24px;
-    li.function-item {
-      .function-img {
-        width: 24px;
-        display: block;
+  ul {
+    &.list-function {
+      display: flex;
+      gap: 24px;
+      li {
+        &.function-item {
+          .function-img {
+            width: 24px;
+            display: block;
+          }
+        }
       }
     }
   }
 }
-@media screen and (max-width: map-get($breakpoints, sm)) {
+@media screen and (max-width: map-get($breakpoints, md)) {
   header {
     background-color: map-get($color, white);
-    padding: 2rem;
+    padding: 2rem 0;
     .container-header {
       .logo {
         .logo-img {
@@ -61,11 +69,15 @@ header .f-row {
     display: none;
   }
   .header-function {
-    ul.list-function {
-      li.function-item {
-        .function-img {
-          width: 20px;
-          filter: brightness(0) saturate(100%);
+    ul {
+      &.list-function {
+        li {
+          &.function-item {
+            .function-img {
+              width: 20px;
+              filter: brightness(0) saturate(100%);
+            }
+          }
         }
       }
     }

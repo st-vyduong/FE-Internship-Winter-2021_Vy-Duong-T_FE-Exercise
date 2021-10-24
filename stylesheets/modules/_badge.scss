@@ -8,9 +8,9 @@
   border-radius: 1.5rem;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: map-get($breakpoints, md)) {
   .badge {
     font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
+    padding: 0.4rem 0.6rem;
   }
 }

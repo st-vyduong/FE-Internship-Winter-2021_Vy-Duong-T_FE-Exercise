@@ -6,7 +6,7 @@ footer {
       padding-bottom: 4.8rem;
     }
   }
-  p.footer-text {
+  .footer-text {
     font-weight: map-get($font-weight, medium);
     color: map-get($color, white);
     border-top: 1px solid map-get($color, white);
@@ -16,7 +16,7 @@ footer {
 .footer-intro {
   padding-right: 4.8rem;
   .intro-content {
-    p.intro-text {
+    .intro-text {
       font-weight: map-get($font-weight, medium);
       font-size: map-get($font-size, sm);
       margin-top: 2.4rem;
@@ -24,59 +24,77 @@ footer {
       line-height: 2.1rem;
     }
   }
-  ul.footer-list-social {
-    padding-top: 5.6rem;
-    li.list-social-item {
-      .social-icon {
-        max-width: 16px;
-        max-height: 16px;
+  ul {
+    &.footer-list-social {
+      padding-top: 5.6rem;
+      li {
+        &.list-social-item {
+          .social-icon {
+            max-width: 16px;
+            max-height: 16px;
+          }
+        }
+        &.list-social-item:not(:first-child) {
+          padding-left: 3.2rem;
+        }
       }
-    }
-    li.list-social-item:not(:first-child) {
-      padding-left: 3.2rem;
     }
   }
 }
 .footer-topic {
   flex-grow: 1;
-  ul.list-topic {
-    li.list-topic-item {
-      .topic-text {
-        font-style: normal;
-        font-weight: map-get($font-weight, bold);
-        color: map-get($color, white);
-        padding-bottom: 0.8rem;
-      }
-      ul.topic {
-        li.topic-item {
-          display: block;
-          padding: 0.8rem 0;
-          font-style: normal;
-          font-weight: map-get($font-weight, regular);
-          font-size: map-get($font-size, sm);
-          line-height: 150%;
+  ul {
+    &.list-topic {
+      li {
+        &.list-topic-item {
+          .topic-text {
+            font-style: normal;
+            font-weight: map-get($font-weight, bold);
+            color: map-get($color, white);
+            padding-bottom: 0.8rem;
+          }
+        }
+        &.list-topic-item:not(:last-child) {
+          padding-bottom: 2.4rem;
         }
       }
     }
-    li.list-topic-item:not(:last-child) {
-      padding-bottom: 2.4rem;
+  }
+}
+ul {
+  &.topic {
+    li {
+      &.topic-item {
+        display: block;
+        padding: 0.8rem 0;
+        font-style: normal;
+        font-weight: map-get($font-weight, regular);
+        font-size: map-get($font-size, sm);
+        line-height: 150%;
+      }
     }
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: map-get($breakpoints, md)) {
   .footer-intro {
     padding-right: 0.4rem;
     padding-bottom: 4.8rem;
-    ul.footer-list-social {
-      display: none;
+    ul {
+      &.footer-list-social {
+        display: none;
+      }
     }
   }
   .footer-topic {
-    ul.list-topic {
-      display: block;
+    ul {
+      &.list-topic {
+        display: block;
+      }
     }
-    li.list-topic-item {
-      display: block;
+    li {
+      &.list-topic-item {
+        display: block;
+      }
     }
   }
 }

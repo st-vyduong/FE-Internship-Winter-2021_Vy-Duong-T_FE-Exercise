@@ -6,11 +6,11 @@
   }
   .benefit-content {
     padding-top: 4.8rem;
-    h4.adventage-text {
+    .adventage-text {
       font-weight: map-get($font-weight, bold);
       padding-bottom: 1.6rem;
     }
-    p.adventage-detail {
+    .adventage-detail {
       font-size: map-get($font-size, sm);
       font-weight: map-get($font-weight, medium);
       line-height: 2.1rem;
@@ -18,17 +18,17 @@
     }
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: map-get($breakpoints, md)) {
   .benefit {
     display: flex;
     align-items: center;
     .benefit-content {
       padding-left: 1.6rem;
       padding-top: 0;
-      h4.adventage-text {
+      .adventage-text {
         padding-bottom: 0.8rem;
       }
-      p.adventage-detail {
+      .adventage-detail {
         font-size: map-get($font-size, xxxs);
         line-height: 1.5rem;
       }

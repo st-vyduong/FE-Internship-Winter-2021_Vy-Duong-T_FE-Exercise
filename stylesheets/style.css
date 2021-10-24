@@ -191,7 +191,15 @@ h4 {
   flex-direction: row;
 }
 
-@media screen and (max-width: 479px) {
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+@media screen and (max-width: 767.98px) {
   h2 {
     font-size: 4.8rem;
     line-height: 4.8rem;
@@ -205,6 +213,14 @@ h4 {
   h4 {
     font-size: 1.2rem;
     line-height: 1.8rem;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
   }
 }
 .btn {
@@ -236,16 +252,16 @@ h4 {
   background-color: #FFFFFF;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767.98px) {
   .btn.show-btn {
+    font-size: 1rem;
     line-height: 1.5rem;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem;
     border: none;
   }
   .btn.collection-btn {
-    border-radius: 3rem;
-    padding: 0.5rem 1rem;
-  }
-  .btn.show-btn {
+    font-size: 1rem;
     border-radius: 3rem;
     padding: 0.5rem 1rem;
   }
@@ -265,7 +281,7 @@ h4 {
   padding: 1.4rem 2.4rem;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767.98px) {
   .form-input {
     font-size: 1.2rem;
     padding: 1rem 1.2rem;
@@ -281,10 +297,10 @@ h4 {
   border-radius: 1.5rem;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767.98px) {
   .badge {
     font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
+    padding: 0.4rem 0.6rem;
   }
 }
 .product-card {
@@ -292,7 +308,6 @@ h4 {
 }
 .product-card .product-img {
   position: relative;
-  height: 85%;
 }
 .product-card .badge {
   position: absolute;
@@ -304,7 +319,7 @@ h4 {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767.98px) {
   .product-card {
     width: 100%;
     height: 100%;
@@ -321,18 +336,18 @@ h4 {
 .benefit .benefit-content {
   padding-top: 4.8rem;
 }
-.benefit .benefit-content h4.adventage-text {
+.benefit .benefit-content .adventage-text {
   font-weight: 700;
   padding-bottom: 1.6rem;
 }
-.benefit .benefit-content p.adventage-detail {
+.benefit .benefit-content .adventage-detail {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.1rem;
   color: #808080;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767.98px) {
   .benefit {
     display: flex;
     align-items: center;
@@ -341,10 +356,10 @@ h4 {
     padding-left: 1.6rem;
     padding-top: 0;
   }
-  .benefit .benefit-content h4.adventage-text {
+  .benefit .benefit-content .adventage-text {
     padding-bottom: 0.8rem;
   }
-  .benefit .benefit-content p.adventage-detail {
+  .benefit .benefit-content .adventage-detail {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -420,10 +435,10 @@ h4 {
   align-items: center;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767.98px) {
   .container {
-    padding: 0 0.4rem;
-    max-width: 335px;
+    padding: 0 2.4rem;
+    width: 100%;
   }
 
   .row {
@@ -500,7 +515,6 @@ header {
   z-index: 99;
   padding: 3rem 0;
 }
-
 header .f-row {
   align-items: center;
 }
@@ -530,10 +544,10 @@ header .f-row {
   display: block;
 }
 
-@media screen and (max-width: 575.98px) {
+@media screen and (max-width: 767.98px) {
   header {
     background-color: #FFFFFF;
-    padding: 2rem;
+    padding: 2rem 0;
   }
   header .container-header .logo .logo-img {
     filter: brightness(0) saturate(100%);
@@ -581,7 +595,7 @@ header .f-row {
   padding-bottom: 8.6rem;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767.98px) {
   .banner .container-banner {
     padding: 0;
     padding-top: 34rem;
@@ -610,7 +624,7 @@ footer .container-footer {
 footer .container-footer .footer-info {
   padding-bottom: 4.8rem;
 }
-footer p.footer-text {
+footer .footer-text {
   font-weight: 400;
   color: #FFFFFF;
   border-top: 1px solid #FFFFFF;
@@ -620,7 +634,7 @@ footer p.footer-text {
 .footer-intro {
   padding-right: 4.8rem;
 }
-.footer-intro .intro-content p.intro-text {
+.footer-intro .intro-content .intro-text {
   font-weight: 400;
   font-size: 1.4rem;
   margin-top: 2.4rem;
@@ -647,7 +661,11 @@ footer p.footer-text {
   color: #FFFFFF;
   padding-bottom: 0.8rem;
 }
-.footer-topic ul.list-topic li.list-topic-item ul.topic li.topic-item {
+.footer-topic ul.list-topic li.list-topic-item:not(:last-child) {
+  padding-bottom: 2.4rem;
+}
+
+ul.topic li.topic-item {
   display: block;
   padding: 0.8rem 0;
   font-style: normal;
@@ -655,11 +673,8 @@ footer p.footer-text {
   font-size: 1.4rem;
   line-height: 150%;
 }
-.footer-topic ul.list-topic li.list-topic-item:not(:last-child) {
-  padding-bottom: 2.4rem;
-}
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767.98px) {
   .footer-intro {
     padding-right: 0.4rem;
     padding-bottom: 4.8rem;
@@ -1352,10 +1367,10 @@ footer p.footer-text {
   background-size: cover;
   position: relative;
 }
-.banner .container-banner h2.title-text {
+.banner .container-banner .title-text {
   margin-bottom: 2.4rem;
 }
-.banner .container-banner h2.title-text span.title-span {
+.banner .container-banner .title-text .title-span {
   display: block;
 }
 .banner .container-banner .shop-now {
@@ -1395,12 +1410,12 @@ footer p.footer-text {
   width: 70%;
   padding-left: 1.6rem;
 }
-.adventage .adventage-content h4.adventage-text {
+.adventage .adventage-content .adventage-text {
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 2;
 }
-.adventage .adventage-content p.adventage-detail {
+.adventage .adventage-content .adventage-detail {
   font-weight: 400;
   line-height: 1.5;
   color: #A8A8A8;
@@ -1444,7 +1459,7 @@ footer p.footer-text {
   bottom: 5.3rem;
   z-index: 1;
 }
-.collection-content .collection-item-content h3.collection-item-text {
+.collection-content .collection-item-content .collection-item-text {
   font-size: 2.4rem;
   line-height: 3.6rem;
   font-weight: 400;
@@ -1477,7 +1492,7 @@ ul.list-product {
   padding-top: 4.8rem;
 }
 
-.ptoday h3.title {
+.ptoday .title {
   text-align: left;
 }
 
@@ -1486,7 +1501,7 @@ ul.list-product {
   background-size: cover;
   position: relative;
 }
-.newsletter .container-newsletter .newsletter-cap p.newsletter-text {
+.newsletter .container-newsletter .newsletter-cap .newsletter-text {
   font-size: 2.4rem;
   line-height: 3.6rem;
   font-weight: 400;
@@ -1509,13 +1524,13 @@ ul.list-product {
   width: 100%;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767.98px) {
   .product-price {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 
-  .banner .container-banner h2.title-text {
+  .banner .container-banner .title-text {
     font-size: 4.8rem;
     font-weight: 700;
     margin-bottom: 1.6rem;
@@ -1543,10 +1558,10 @@ ul.list-product {
     width: 70%;
     padding-left: 1.6rem;
   }
-  .adventage .adventage-content h4.adventage-text {
+  .adventage .adventage-content .adventage-text {
     font-size: 1.2rem;
   }
-  .adventage .adventage-content p.adventage-detail {
+  .adventage .adventage-content .adventage-detail {
     font-size: 1rem;
   }
 
@@ -1556,14 +1571,16 @@ ul.list-product {
     right: 1.6rem;
     bottom: 1.6rem;
   }
-  .collection-content .collection-item-content h3.collection-item-text {
+  .collection-content .collection-item-content .collection-item-text {
     font-size: 1.4rem;
     line-height: 2.1rem;
     min-height: 4rem;
   }
 
-  .selected .show-btn {
-    right: 0.4rem;
+  .selected .container-selected .show-btn {
+    right: 2.4rem;
+    padding: 0;
+    line-height: 2.7rem;
   }
 
   ul.list-product {
@@ -1578,7 +1595,7 @@ ul.list-product {
     padding-top: 3.6rem;
   }
 
-  .newsletter .container-newsletter .newsletter-cap p.newsletter-text {
+  .newsletter .container-newsletter .newsletter-cap .newsletter-text {
     font-size: 1.4rem;
     line-height: 2.1rem;
     padding-right: 12rem;
@@ -1593,6 +1610,7 @@ ul.list-product {
   .newsletter .container-newsletter .newsletter-subcribe .subcribe-form .form-input {
     margin-bottom: 1.6rem;
     line-height: 1.8rem;
+    margin-right: 0;
   }
 }
 

@@ -15,17 +15,21 @@
     @include col-width($i);
   }
 }
-.row.center-x { 
-  justify-content: center;
+.row {
+  &.center-x { 
+    justify-content: center;
+  }
 }
-.row.center-y {
-  align-items: center;
+.row {
+  &.center-y {
+    align-items: center;
+  }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: map-get($breakpoints, md)) {
   .container {
-    padding: 0 0.4rem;
-    max-width: 335px;
+    padding: 0 2.4rem;
+    width: 100%;
   }
   .row {
     flex-wrap: wrap;
