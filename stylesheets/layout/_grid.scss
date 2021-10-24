@@ -10,10 +10,9 @@
 .col {
   padding: 0 1rem;
 }
-$sizeList: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-@each $size in $sizeList {
-  .col-md-#{$size} {
-    @include col-width($size);
+@for $i from 1 through 12 {
+  .col-md-#{$i} {
+    @include col-width($i);
   }
 }
 .row.center-x { 
@@ -35,9 +34,9 @@ $sizeList: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
   .col {
     padding: 0 0.4rem;
   }
-  @each $size in $sizeList {
-    .col-xs-#{$size} {
-      @include col-width($size);
+  @for $i from 1 through 12 {
+    .col-xs-#{$i} {
+      @include col-width($i);
     }
   }
   main {

@@ -4,40 +4,45 @@
   font-style: normal;
   font-weight: map-get($font-weight, bold);
   font-size: map-get($font-size , xs);
+  &.form-btn {
+    color: map-get($color, grey-a);
+    padding: 1.4rem 3rem;
+    border-radius: 5.6rem;
+    background-color: map-get($color, primary);
+    line-height: 1.9rem;
+  }
+  &.show-btn {
+    border: 1px solid map-get($color, grey-f);
+    color: map-get($color, grey-a);
+    padding: 1.4rem 3rem;
+    border-radius: 4rem;
+    background-color: transparent;
+    line-height: 1.9rem;
+  }
+  &.collection-btn {
+    color: map-get($color, grey-a);
+    padding: 1.4rem 1.8rem;
+    border-radius: 3.3rem;
+    background-color: map-get($color, white);
+  }   
 }
-.btn.form-btn {
-  color: map-get($color, grey-a);
-  padding: 1.4rem 3rem;
-  border-radius: 5.6rem;
-  background-color: map-get($color, primary);
-  line-height: 1.9rem;
-}
-.btn.show-btn {
-  border: 1px solid map-get($color, grey-f);
-  color: map-get($color, grey-a);
-  padding: 1.4rem 3rem;
-  border-radius: 4rem;
-  background-color: transparent;
-  line-height: 1.9rem;
-}
-.btn.collection-btn {
-  color: map-get($color, grey-a);
-  padding: 1.4rem 1.8rem;
-  border-radius: 3.3rem;
-  background-color: map-get($color, white);
-}   
 @media screen and (max-width: 479px) {
-  .btn.show-btn {
-    line-height: 1.5rem;
-    border: none;
+  .btn {
+    &.show-btn {
+      line-height: 1.5rem;
+      border: none;
+    }
+    &.collection-btn {
+      border-radius: 3rem;
+      padding: 0.5rem 1rem;
+    }
+    &.show-btn {
+      border-radius: 3rem;
+      padding: 0.5rem 1rem;
+    }
+    &.form-btn {
+      font-size: map-get($font-size, xs);
+      padding: 0.7rem 2rem;
+    } 
   }
-  .btn.collection-btn,
-  .btn.show-btn {
-    border-radius: 3rem;
-    padding: 0.5rem 1rem;
-  }
-  .btn.form-btn {
-    font-size: map-get($font-size, xs);
-    padding: 0.7rem 2rem;
-  } 
 }

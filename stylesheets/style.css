@@ -214,7 +214,6 @@ h4 {
   font-weight: 700;
   font-size: 1.3rem;
 }
-
 .btn.form-btn {
   color: #333333;
   padding: 1.4rem 3rem;
@@ -222,7 +221,6 @@ h4 {
   background-color: #FBB03B;
   line-height: 1.9rem;
 }
-
 .btn.show-btn {
   border: 1px solid #C4C4C4;
   color: #333333;
@@ -231,7 +229,6 @@ h4 {
   background-color: transparent;
   line-height: 1.9rem;
 }
-
 .btn.collection-btn {
   color: #333333;
   padding: 1.4rem 1.8rem;
@@ -244,13 +241,14 @@ h4 {
     line-height: 1.5rem;
     border: none;
   }
-
-  .btn.collection-btn,
-.btn.show-btn {
+  .btn.collection-btn {
     border-radius: 3rem;
     padding: 0.5rem 1rem;
   }
-
+  .btn.show-btn {
+    border-radius: 3rem;
+    padding: 0.5rem 1rem;
+  }
   .btn.form-btn {
     font-size: 1.3rem;
     padding: 0.7rem 2rem;
