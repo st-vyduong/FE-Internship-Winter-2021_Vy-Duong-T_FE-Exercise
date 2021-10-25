@@ -1,83 +1,52 @@
 let key = 'products';
 function creatProduct(product) {
-  let full_product = new Product(product.id, product.name, product.img, product.price, product.discount);
-  return full_product;
+  let fullProduct = new Product(product.id, product.name, product.img, product.price, product.discount);
+  return fullProduct;
 }
 
 function getCartProductsFromLcs() {
-  let cart_products_list_lcs = localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
-  return cart_products_list_lcs;
+  let cartProductsListInLcs = localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
+  return cartProductsListInLcs;
 }
 
-function saveProductsListOnLocalStorage(cart_products_list_lcs) {
-  localStorage.setItem(key, JSON.stringify(cart_products_list_lcs));
+function saveProductsListOnLocalStorage(cartProductsListInLcs) {
+  localStorage.setItem(key, JSON.stringify(cartProductsListInLcs));
 }
 
 function calcTotalCost() {
   let total = 0;
-  for (let i=0; i<cart_products_list.length; i++) {
-    let product = product_list.find(product => product.id == cart_products_list[i].id);
-    total += cart_products_list[i].amount * product.calcDiscountPrice();
+  for (let i=0; i<cartProductsList.length; i++) {
+    let product = product_list.find(product => product.id == cartProductsList[i].id);
+    total += cartProductsList[i].amount * product.calcDiscountPrice();
   }
   return total.toFixed(2);
 }
 
-let cart_icon_counter = document.querySelector('header .cart-counter');
+let $cartIcon = document.querySelector('header #cart-view');
+let $spanCartCounter = document.createElement('span');
+$spanCartCounter.className = 'cart-counter';
+$spanCartCounter.innerHTML = 0;
+$cartIcon.appendChild($spanCartCounter);
 function calcAmountInCartIcon() {
-  let amount = cart_products_list.reduce((total, currentValue) => {
+  let amount = cartProductsList.reduce((total, currentValue) => {
     return total + currentValue.amount;
   }, 0);
-  cart_icon_counter.innerHTML = amount;
+  $spanCartCounter.innerHTML = amount;
 }
-// Add Cart
 
-let cart_products_list = getCartProductsFromLcs();
+// Add Cart
+let cartProductsList = getCartProductsFromLcs();
 function addItemIntoCart(id) {
-  let status_product = false;
-  let seleted_product = cart_products_list.find(product => product.id == id);
+  let statusProduct = false;
+  let seleted_product = cartProductsList.find(product => product.id == id);
   if (seleted_product) {
     seleted_product.amount++;
-    status_product = true;
+    statusProduct = true;
   }
   else {
     let cart_product = new cartProduct(id, 1);
-    cart_products_list.push(cart_product);
+    cartProductsList.push(cart_product);
   }
-  calcAmountInCartIcon();
-  saveProductsListOnLocalStorage(cart_products_list);
+  $spanCartCounter.innerHTML = parseInt($spanCartCounter.innerHTML) + 1;
+  saveProductsListOnLocalStorage(cartProductsList);
 }
-
-let total_cost_selector = document.querySelector('.cart-footer .cart-footer-payment .total-cost-price');
-
-
-let product_amount = document.querySelector('cart-product-amount input');
-let a = [];
-function increment(id) {
-  for (let i=0; i<cart_products_list.length; i++) {
-    if (cart_products_list[i].id == id) {
-      cart_products_list[i].amount = cart_products_list[i].amount + 1;
-    }
-  }
-  calcAmountInCartIcon();
-  saveProductsListOnLocalStorage(cart_products_list);
-  renderCart();
-}
-function decrement(id) {
-  for (let i=0; i<cart_products_list.length; i++) {
-    if (cart_products_list[i].id == id) {
-      cart_products_list[i].amount = cart_products_list[i].amount - 1;
-    }
-  }
-  calcAmountInCartIcon();
-  saveProductsListOnLocalStorage(cart_products_list);
-  renderCart();
-}
-
-function deleteItem(id) {
-  cart_products_list = cart_products_list.filter(product => product.id != id);
-  total_cost_selector.innerHTML = '$' + calcTotalCost();
-  calcAmountInCartIcon();
-  saveProductsListOnLocalStorage(cart_products_list);
-  renderCart();
-}
-

@@ -8,9 +8,9 @@ product_list.push(product2);
 product_list.push(product3);
 product_list.push(product4);
 
-let ul_product = document.querySelector('.selected .list-product');
+let $ul_product = document.querySelector('.selected .list-product');
 for (let i=0; i<4; i++) {
-  ul_product.innerHTML += `
+  $ul_product.innerHTML += `
       <li class="col col-md-3 col-xs-6 list-product-item">
         <div class="product-card">
             <img src="${product_list[i].img}" alt="T-Shirt Summer Vibes" class="product-img">

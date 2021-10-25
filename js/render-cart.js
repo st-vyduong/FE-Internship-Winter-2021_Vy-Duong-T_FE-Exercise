@@ -1,35 +1,101 @@
-let cart_product = document.querySelector('.cart .cart-body tbody');
+let $cart_product = document.querySelector('.cart .cart-body tbody');
 
 function renderCart() {
-  let cart_content = '';
-  for (let i=0; i<cart_products_list.length; i++) {
-    let product = product_list.find(product => product.id == cart_products_list[i].id);
-    cart_content += `
-      <tr>
-        <td class="f-row align-item-center">
-          <img src="${product.img}" alt="${product.name}" class="cart-product-img">
-          <div class="cart-product-info">
-            <h4 class="cart-product-name">${product.name}</h4>
-            <p class="cart-product-id">#${product.id}</p>
-          </div>
-        </td>
-        <td class="cart-product-color">White</td>
-        <td class="cart-product-size">XL</td>
-        <td class="cart-product-amount">
-          <div class="amount">
-            <button type="button" class="btn cart-option-btn minus-btn" ${cart_products_list[i].amount === 1 ? 'disabled' : ''} onclick="decrement('${cart_products_list[i].id}')">-</button>
-            <input type="text" name="amount" class="input-amount" value="${cart_products_list[i].amount}" min="1">
-            <button type="button" class="btn cart-option-btn plus-btn" onclick="increment('${cart_products_list[i].id}')">+</button>
-          </div>
-        </td>
-        <td>
-          <span class="cart-product-price cart-discount-price}">$${product.calcDiscountPrice()}</span>
-          <span class="cart-product-price ${product.discount == 0 ? 'display-none' : 'cart-basic-price'}">$${product.price}</span>
-        </td>
-        <td><button type="button" onclick="deleteItem('${product.id}')" class="btn cart-option-btn""><img src="./assets/img/CANCEL.png"></button></td>
-      </tr>
-    `;
+  for (let i=0; i<cartProductsList.length; i++) {
+    let product = product_list.find(product => product.id == cartProductsList[i].id);
+    let $cart_product = document.querySelector('tbody');
+    const $tr = document.createElement('tr');
+    $cart_product.appendChild($tr);
+
+    $tdProductInfo = document.createElement('td');
+    $tr.appendChild($tdProductInfo);
+    $tdColor = document.createElement('td');
+    $tr.appendChild($tdColor);
+    $tdSize = document.createElement('td');
+    $tr.appendChild($tdSize);
+    $tdAmount = document.createElement('td');
+    $tr.appendChild($tdAmount);
+    $tdPrice = document.createElement('td');
+    $tr.appendChild($tdPrice);
+    $tdDelete = document.createElement('td');
+    $tr.appendChild($tdDelete);
+
+    $tdProductInfo.classList.add('f-row', 'align-item-center');
+    let $imgProduct = document.createElement('img');
+    $imgProduct.src = product.img;
+    $imgProduct.alt = product.name;
+    $imgProduct.classList.add('cart-product-img');
+    $tdProductInfo.appendChild($imgProduct);
+    let $divProductInfo = document.createElement('div');
+    $divProductInfo.classList.add('cart-product-info');
+    $tdProductInfo.appendChild($divProductInfo);
+
+    let $h4ProductName = document.createElement('h4');
+    $h4ProductName.classList.add('cart-product-name');
+    $h4ProductName.innerHTML = product.name;
+    $divProductInfo.appendChild($h4ProductName);
+    let $pProductID = document.createElement('p');
+    $pProductID.classList.add('cart-product-id');
+    $pProductID.innerHTML = `#${product.id}`;
+    $divProductInfo.appendChild($pProductID);
+
+    $tdColor.innerHTML = 'White';
+    $tdSize.innerHTML = 'XL';
+
+    $tdAmount.classList.add('cart-product-amount');
+    $divAmount = document.createElement('div');
+    $divAmount.classList.add('amount')
+    $btnMinus = document.createElement('button');
+    $btnMinus.classList.add('btn', 'cart-option-btn', 'minus-btn');
+    $btnMinus.innerHTML = '-';
+    $btnPlus = document.createElement('button');
+    $btnPlus.classList.add('btn', 'cart-option-btn', 'plus-btn');
+    $btnPlus.innerHTML = '+';
+    $inputAmount = document.createElement('input');
+    $inputAmount.type = 'text';
+    $inputAmount.readOnly = true;
+    $inputAmount.classList.add('input-amount');
+    $inputAmount.id = product.id;
+    $inputAmount.value = cartProductsList[i].amount;
+    $tdAmount.appendChild($divAmount);
+    $divAmount.appendChild($btnMinus);
+    $divAmount.appendChild($inputAmount);
+    $divAmount.appendChild($btnPlus);
+
+    $spanNewPrice = document.createElement('span');
+    $spanNewPrice.classList.add('cart-product-price', 'cart-discount-price');
+    $spanNewPrice.innerHTML = `$${product.calcDiscountPrice()}`;
+    $spanOldPrice = document.createElement('span');
+    $spanOldPrice.classList.add('cart-product-price', product.discount == 0 ? 'display-none' : 'cart-basic-price');
+    $spanOldPrice.innerHTML = `$${product.price}`;
+    $tdPrice.appendChild($spanNewPrice);
+    $tdPrice.appendChild($spanOldPrice);
+
+    $btnDelete = document.createElement('button');
+    $btnDelete.classList.add('btn', 'cart-option-btn');
+    $tdDelete.appendChild($btnDelete);
+    $imgCancel = document.createElement('img');
+    $imgCancel.src = './assets/img/CANCEL.png';
+    $btnDelete.appendChild($imgCancel);
+
+    let $listInputAmount = document.querySelectorAll('.input-amount');
+    $btnMinus.addEventListener('click', () => {
+        $listInputAmount[i].value = parseInt($listInputAmount[i].value) - 1;
+        $spanCartCounter.innerHTML = parseInt($spanCartCounter.innerHTML) - 1;
+        decrement(product.id);
+    })
+
+    $btnPlus.addEventListener('click', () => {
+        $listInputAmount[i].value = parseInt($listInputAmount[i].value) + 1;
+        $spanCartCounter.innerHTML = parseInt($spanCartCounter.innerHTML) + 1;
+        increment(product.id);
+      })
+
+    $btnDelete.addEventListener('click', () => {
+      $cart_product.removeChild($tr);
+      $spanCartCounter.innerHTML = parseInt($spanCartCounter.innerHTML) - cartProductsList[i].amount;
+      deleteItem(product.id);
+    })
   }
-  cart_product.innerHTML = cart_content;
-  total_cost_selector.innerHTML = '$' + calcTotalCost();
+  $total_cost_selector.innerHTML = '$' + calcTotalCost();
 }
