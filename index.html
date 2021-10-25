@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./stylesheets/style.css">
   <title>E-SHOP</title>
 </head>
-<body>
+<body onload="calcAmountInCartIcon()">
   <!-- Header -->
   <header>
     <div class="container container-header">
@@ -135,7 +135,7 @@
       </div>
     </section>
     <!-- Selected -->
-    <section class="selected">
+    <section class="selected" id="selected">
       <div class="container container-selected">
         <h3 class="title">Selected just for you</h3>
         <ul class="row list-product justify-content-between"></ul>
@@ -340,7 +340,7 @@
         </table>
         <div class="cart-footer f-row justify-content-between">
             <div class="cart-continue-shopping">
-                <button class="btn back-btn bg-transparent" onclick="linkToCart()"><img src="./assets/img/noun_Arrow Left.png" alt=""></button>
+                <a href="#selected" class="btn back-btn bg-transparent" onclick="linkToCart()"><img src="./assets/img/noun_Arrow Left.png" alt="Continue Shopping"></a>
                 <h4 class="cart-footer-continue">Continue Shopping</h4>
             </div>
             <div class="cart-footer-payment f-row align-item-center">
@@ -359,8 +359,6 @@
         </div>
     </div>
   </section>
-  
-
 <script src="./js/class.js"></script>
 <script src="./js/add_cart.js"></script>
 <script src="./js/dump_data.js"></script>

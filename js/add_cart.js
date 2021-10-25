@@ -22,14 +22,15 @@ function calcTotalCost() {
   return total.toFixed(2);
 }
 
+let cart_icon_counter = document.querySelector('header .cart-counter');
 function calcAmountInCartIcon() {
   let amount = cart_products_list.reduce((total, currentValue) => {
     return total + currentValue.amount;
   }, 0);
-  return amount;
+  cart_icon_counter.innerHTML = amount;
 }
 // Add Cart
-let cart_icon_counter = document.querySelector('header .cart-counter');
+
 let cart_products_list = getCartProductsFromLcs();
 function addItemIntoCart(id) {
   let status_product = false;
@@ -42,7 +43,7 @@ function addItemIntoCart(id) {
     let cart_product = new cartProduct(id, 1);
     cart_products_list.push(cart_product);
   }
-  cart_icon_counter.innerHTML = calcAmountInCartIcon();
+  calcAmountInCartIcon();
   saveProductsListOnLocalStorage(cart_products_list);
 }
 
@@ -50,16 +51,32 @@ let total_cost_selector = document.querySelector('.cart-footer .cart-footer-paym
 
 
 let product_amount = document.querySelector('cart-product-amount input');
+let a = [];
 function increment(id) {
-  total_cost_selector.innerHTML = '$' + calcTotalCost();
+  for (let i=0; i<cart_products_list.length; i++) {
+    if (cart_products_list[i].id == id) {
+      cart_products_list[i].amount = cart_products_list[i].amount + 1;
+    }
+  }
+  calcAmountInCartIcon();
+  saveProductsListOnLocalStorage(cart_products_list);
+  renderCart();
 }
-function decrement(tam) {
-
+function decrement(id) {
+  for (let i=0; i<cart_products_list.length; i++) {
+    if (cart_products_list[i].id == id) {
+      cart_products_list[i].amount = cart_products_list[i].amount - 1;
+    }
+  }
+  calcAmountInCartIcon();
+  saveProductsListOnLocalStorage(cart_products_list);
+  renderCart();
 }
 
 function deleteItem(id) {
   cart_products_list = cart_products_list.filter(product => product.id != id);
-  cart_icon_counter.innerHTML = calcAmountInCartIcon();
+  total_cost_selector.innerHTML = '$' + calcTotalCost();
+  calcAmountInCartIcon();
   saveProductsListOnLocalStorage(cart_products_list);
   renderCart();
 }

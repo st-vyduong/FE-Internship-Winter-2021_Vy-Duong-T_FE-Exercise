@@ -1647,7 +1647,7 @@ ul.list-product {
 }
 .cart .cart-body tbody .cart-product-amount .amount .input-amount {
   border: none;
-  width: 1.2rem;
+  width: 3rem;
   margin: 0 2rem;
   font-size: 1.6rem;
   font-weight: 700;

@@ -1,4 +1,5 @@
 let cart_product = document.querySelector('.cart .cart-body tbody');
+
 function renderCart() {
   let cart_content = '';
   for (let i=0; i<cart_products_list.length; i++) {
@@ -16,9 +17,9 @@ function renderCart() {
         <td class="cart-product-size">XL</td>
         <td class="cart-product-amount">
           <div class="amount">
-            <button type="button" class="btn cart-option-btn" disabled="disabled" onclick="decrement('${cart_products_list[i]}')">-</button>
+            <button type="button" class="btn cart-option-btn minus-btn" ${cart_products_list[i].amount === 1 ? 'disabled' : ''} onclick="decrement('${cart_products_list[i].id}')">-</button>
             <input type="text" name="amount" class="input-amount" value="${cart_products_list[i].amount}" min="1">
-            <button type="button" class="btn cart-option-btn" onclick="increment('${cart_products_list[i].id}')">+</button>
+            <button type="button" class="btn cart-option-btn plus-btn" onclick="increment('${cart_products_list[i].id}')">+</button>
           </div>
         </td>
         <td>
