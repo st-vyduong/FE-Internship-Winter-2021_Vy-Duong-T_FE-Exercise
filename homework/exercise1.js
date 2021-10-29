@@ -4,4 +4,4 @@ var mang = [
 
 var calcSumOfOddIntegers = mang.reduce((total, currentValue) => {
   return currentValue % 2 !== 0 ? total + currentValue : total;
-});
+}, 0);
