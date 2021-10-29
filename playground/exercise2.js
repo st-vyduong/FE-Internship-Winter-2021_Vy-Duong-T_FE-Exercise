@@ -1,8 +1,3 @@
-var difference = function(a) {
-  if (a > 19) {
-    return (a-19)*3;
-  } else 
-  {
-    return 19-a;
-  }
-}
+var computeDifferenceBetweenNumberAnd19 = function (a) {
+  return a > 19 ? (a - 19) * 3 : 19 - a;
+};

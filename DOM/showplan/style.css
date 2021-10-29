@@ -1,0 +1,42 @@
+.container {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.list-plan {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.list-plan-item {
+  width: calc(50% - 10px);
+}
+.plan-card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.plan-card-title {
+  padding: 8px;
+  margin: 0;
+  background-color: #F8F8F8;
+}
+.card_body {
+  padding-bottom: 16px;
+}
+p {
+  line-height: 10px;
+}
+.btn {
+  width: 100%;
+  padding: 8px 0;
+  font-weight: bold;
+}
+.btn.get-btn {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background-color: #FFFFFF;
+}
+.btn.buy-btn {
+  border: 2px solid #007bff;
+  color: #FFFFFF;
+  background-color: #007bff;
+}

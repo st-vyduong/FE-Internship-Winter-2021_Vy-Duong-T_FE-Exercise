@@ -1,6 +1,3 @@
-var slice = function(str) {
-  if (str.length > 15) {
-    str = str.slice(10) + '...';
-  }
-  return str;
-}
+var sliceString = function (str) {
+  return str.length > 15 ? str.slice(10) + '...' : str;
+};

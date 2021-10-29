@@ -7,12 +7,10 @@ function Student(name, age, school) {
 var student1 = new Student('John', 26, 'Cambridge');
 var student2 = new Student('Mark', 30, 'Oxford');
 var student3 = new Student('Bill', 28, 'Havard');
-Student.prototype.coding = function(){
+Student.prototype.coding = function () {
   if (this.age > 28) {
     console.log('coding master');
-  } else 
-  {
+  } else {
     console.log('learning code');
   }
-}
-
+};

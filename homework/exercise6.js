@@ -1,11 +1,13 @@
-var rs = [];
-var same = function(arr1, arr2) {
-  arr1.forEach(function(x) {
-    arr2.forEach(function(y) {
-      if ( (x === y) && (!rs.includes(y))) {
-        rs.push(y);
-      }
-    })
-  })
+var findDuplicateNumbersOf2Array = function (arr1, arr2) {
+  var rs = [];
+  var data1Obj = {};
+  arr1.forEach((x) => {
+    data1Obj[x] = true;
+  });
+  arr2.forEach((x) => {
+    if (data1Obj[x]) {
+      rs.push(x);
+    }
+  });
   return rs;
-}
+};

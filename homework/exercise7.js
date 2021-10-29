@@ -1,7 +1,7 @@
-var num_sum = function(number) {
-  var arr = number.toString().split('');
-  var rs = arr.reduce(function(total, currentValue) {
-    return total + parseInt(currentValue);
+var calcSumDigitsOfNumber = function (num) {
+  var arr = num.toString().split('');
+  var rs = arr.reduce(function (total, currentValue) {
+    return total + +currentValue;
   }, 0);
   return rs;
-}
+};
