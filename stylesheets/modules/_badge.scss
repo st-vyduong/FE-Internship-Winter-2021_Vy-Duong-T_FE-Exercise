@@ -1,0 +1,16 @@
+.badge {
+  font-size: map-get($font-size, xxs);
+  font-weight: map-get($font-weight, bold);
+  color: map-get($color, white);
+  background-color: map-get($color, red);
+  display: inline;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+  .badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+}

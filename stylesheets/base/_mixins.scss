@@ -1,0 +1,6 @@
+@mixin pxRem($property, $value){
+	#{$property}: $value;
+}
+@mixin col-width($value){
+	max-width: calc(100% / 12 * $value);
+}

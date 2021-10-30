@@ -1,0 +1,47 @@
+$value: 4;
+$sizeList: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+@each $size in $sizeList {
+  .pd-#{$size} {
+    @include pxRem(padding, $value * $size);
+  }
+  .px-#{$size} {
+    @include pxRem(padding, 0 $value * $size);
+  }
+  .py-#{$size} {
+    @include pxRem(padding, $value * $size 0);
+  }
+  .pl-#{$size} {
+    @include pxRem(padding-left, $value * $size);
+  }
+  .pr-#{$size} {
+    @include pxRem(padding-right, $value * $size);
+  }
+  .pt-#{$size} {
+    @include pxRem(padding-top, $value * $size);
+  }
+  .pb-#{$size} {
+    @include pxRem(padding-bottom, $value * $size);
+  }
+  .mg-#{$size} {
+    @include pxRem(margin, $value * $size);
+  }
+  .mx-#{$size} {
+    @include pxRem(margin, 0 $value * $size);
+  }
+  .my-#{$size} {
+    @include pxRem(margin, $value * $size 0);
+  }
+  .ml-#{$size} {
+    @include pxRem(margin-left, $value * $size);
+  }
+  .mr-#{$size} {
+    @include pxRem(margin-right, $value * $size);
+  }
+  .mt-#{$size} {
+    @include pxRem(margin-top, $value * $size);
+  }
+  .mb-#{$size} {
+    @include pxRem(margin-bottom, $value * $size);
+  }
+}

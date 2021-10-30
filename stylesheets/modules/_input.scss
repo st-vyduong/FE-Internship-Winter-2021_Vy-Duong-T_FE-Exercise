@@ -1,0 +1,17 @@
+.form-input {
+  border: none;
+  background: map-get($color, white);
+  border-radius: 6.1rem;    
+  font-size: map-get($font-size, xs);
+  font-weight: map-get($font-weight, medium);
+  color: map-get($color, grey-c);
+  line-height: 1.9rem;
+  padding: 1.4rem 2.4rem;
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+  .form-input {
+    font-size: map-get($font-size, xxs);
+    padding: 1rem 1.2rem;
+  }
+}
