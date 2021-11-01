@@ -266,6 +266,10 @@ h4 {
 .btn.cart-btn {
   color: #000000;
   line-height: 1.9rem;
+  background-color: #FBB03B;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  padding: 5px;
 }
 .btn.cart-option-btn {
   background-color: transparent;
@@ -350,8 +354,6 @@ h4 {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0.7;
 }
 .product-card:hover .cart-btn {
   display: block;

@@ -16,7 +16,7 @@ function saveProductsListOnLocalStorage(cartProductsListInLcs) {
 function calcTotalCost() {
   let total = 0;
   for (let i=0; i<cartProductsList.length; i++) {
-    let product = product_list.find(product => product.id == cartProductsList[i].id);
+    let product = productList.find(product => product.id == cartProductsList[i].id);
     total += cartProductsList[i].amount * product.calcDiscountPrice();
   }
   return total.toFixed(2);
@@ -38,15 +38,15 @@ function calcAmountInCartIcon() {
 let cartProductsList = getCartProductsFromLcs();
 function addItemIntoCart(id) {
   let statusProduct = false;
-  let seleted_product = cartProductsList.find(product => product.id == id);
-  if (seleted_product) {
-    seleted_product.amount++;
+  let seletedProduct = cartProductsList.find(product => product.id == id);
+  if (seletedProduct) {
+    seletedProduct.amount++;
     statusProduct = true;
   }
   else {
-    let cart_product = new cartProduct(id, 1);
-    cartProductsList.push(cart_product);
+    let newCartProduct = new cartProduct(id, 1);
+    cartProductsList.push(newCartProduct);
   }
-  $spanCartCounter.innerHTML = parseInt($spanCartCounter.innerHTML) + 1;
+  $spanCartCounter.innerHTML = +$spanCartCounter.innerHTML + 1;
   saveProductsListOnLocalStorage(cartProductsList);
 }

@@ -1,11 +1,11 @@
-let $cart_product = document.querySelector('.cart .cart-body tbody');
+let $cartProduct = document.querySelector('.cart .cart-body tbody');
 
 function renderCart() {
   for (let i=0; i<cartProductsList.length; i++) {
-    let product = product_list.find(product => product.id == cartProductsList[i].id);
-    let $cart_product = document.querySelector('tbody');
+    let product = productList.find(product => product.id == cartProductsList[i].id);
+    let $cartProduct = document.querySelector('tbody');
     const $tr = document.createElement('tr');
-    $cart_product.appendChild($tr);
+    $cartProduct.appendChild($tr);
 
     $tdProductInfo = document.createElement('td');
     $tr.appendChild($tdProductInfo);
@@ -80,22 +80,22 @@ function renderCart() {
 
     let $listInputAmount = document.querySelectorAll('.input-amount');
     $btnMinus.addEventListener('click', () => {
-        $listInputAmount[i].value = parseInt($listInputAmount[i].value) - 1;
-        $spanCartCounter.innerHTML = parseInt($spanCartCounter.innerHTML) - 1;
+        $listInputAmount[i].value = +$listInputAmount[i].value - 1;
+        $spanCartCounter.innerHTML = +$spanCartCounter.innerHTML - 1;
         decrement(product.id);
     })
 
     $btnPlus.addEventListener('click', () => {
-        $listInputAmount[i].value = parseInt($listInputAmount[i].value) + 1;
-        $spanCartCounter.innerHTML = parseInt($spanCartCounter.innerHTML) + 1;
+        $listInputAmount[i].value = +$listInputAmount[i].value + 1;
+        $spanCartCounter.innerHTML = +$spanCartCounter.innerHTML + 1;
         increment(product.id);
       })
 
     $btnDelete.addEventListener('click', () => {
-      $cart_product.removeChild($tr);
-      $spanCartCounter.innerHTML = parseInt($spanCartCounter.innerHTML) - cartProductsList[i].amount;
+      $cartProduct.removeChild($tr);
+      $spanCartCounter.innerHTML = +$spanCartCounter.innerHTML - cartProductsList[i].amount;
       deleteItem(product.id);
     })
   }
-  $total_cost_selector.innerHTML = '$' + calcTotalCost();
+  $totalCostSelector.innerHTML = '$' + calcTotalCost();
 }

@@ -1,4 +1,4 @@
-let $total_cost_selector = document.querySelector('.cart-footer .cart-footer-payment .total-cost-price');
+let $totalCostSelector = document.querySelector('.cart-footer .cart-footer-payment .total-cost-price');
 
 function increment(id) {
   for (let i=0; i<cartProductsList.length; i++) {
@@ -6,7 +6,7 @@ function increment(id) {
       cartProductsList[i].amount = cartProductsList[i].amount + 1;
     }
   }
-  $total_cost_selector.innerHTML = '$' + calcTotalCost();
+  $totalCostSelector.innerHTML = '$' + calcTotalCost();
   calcAmountInCartIcon();
   saveProductsListOnLocalStorage(cartProductsList);
 }
@@ -16,13 +16,13 @@ function decrement(id) {
       cartProductsList[i].amount = cartProductsList[i].amount - 1;
     }
   }
-  $total_cost_selector.innerHTML = '$' + calcTotalCost();
+  $totalCostSelector.innerHTML = '$' + calcTotalCost();
   calcAmountInCartIcon();
   saveProductsListOnLocalStorage(cartProductsList);
 }
 
 function deleteItem(id) {
   cartProductsList = cartProductsList.filter(product => product.id != id);
-  $total_cost_selector.innerHTML = '$' + calcTotalCost();
+  $totalCostSelector.innerHTML = '$' + calcTotalCost();
   saveProductsListOnLocalStorage(cartProductsList);
 }

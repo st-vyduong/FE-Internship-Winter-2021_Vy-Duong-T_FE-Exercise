@@ -28,6 +28,10 @@
   &.cart-btn {
     color: map-get($color, black);
     line-height: 1.9rem;
+    background-color: map-get($color, primary);
+    color: #FFFFFF;
+    font-size: map-get($font-size, normal);
+    padding: 5px;
   }
   &.cart-option-btn {
     background-color: transparent;

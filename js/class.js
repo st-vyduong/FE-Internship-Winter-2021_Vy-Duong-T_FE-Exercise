@@ -7,8 +7,8 @@ class Product {
     this.discount = discount;
   }
   calcDiscountPrice() {
-    let discount_price = this.price - (this.discount/100*this.price);
-    return discount_price.toFixed(2);
+    let discountPrice = this.price - (this.discount / 100) * this.price;
+    return discountPrice.toFixed(2);
   }
 }
 
