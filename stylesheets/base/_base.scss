@@ -42,8 +42,17 @@ h4 {
 .justify-content-between {
 	justify-content: space-between;
 }
+.align-item-center {
+	align-items: center;
+}
 .yellow-text {
 	color: map-get($color, primary);
+}
+.bg-transparent {
+	background-color: transparent;
+}
+.display-none {
+	display: none !important;
 }
 .f-row {
 	display: flex; 
@@ -55,6 +64,7 @@ h4 {
 .sp-only {
 	display: none;
 }
+
 @media screen and (max-width: map-get($breakpoints, md)) {
 	h2 {
 		font-size: 4.8rem;

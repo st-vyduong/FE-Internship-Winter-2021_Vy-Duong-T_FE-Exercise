@@ -182,8 +182,20 @@ h4 {
   justify-content: space-between;
 }
 
+.align-item-center {
+  align-items: center;
+}
+
 .yellow-text {
   color: #FBB03B;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.display-none {
+  display: none !important;
 }
 
 .f-row {
@@ -251,6 +263,25 @@ h4 {
   border-radius: 3.3rem;
   background-color: #FFFFFF;
 }
+.btn.cart-btn {
+  color: #000000;
+  line-height: 1.9rem;
+  background-color: #FBB03B;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  padding: 5px;
+}
+.btn.cart-option-btn {
+  background-color: transparent;
+  font-size: 1.6rem;
+}
+.btn.amount-btn {
+  border: 1px solid #C4C4C4;
+  border-radius: 4rem;
+  background-color: transparent;
+  line-height: 1.9rem;
+  padding: 1.3rem 2.4rem;
+}
 
 @media screen and (max-width: 767.98px) {
   .btn.show-btn {
@@ -317,6 +348,15 @@ h4 {
 .product-card .product-info .product-sale {
   display: flex;
   justify-content: space-between;
+}
+.product-card .cart-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.product-card:hover .cart-btn {
+  display: block;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -542,6 +582,22 @@ header .f-row {
 .header-function ul.list-function li.function-item .function-img {
   width: 24px;
   display: block;
+}
+
+#cart-view {
+  position: relative;
+  display: block;
+}
+#cart-view .cart-counter {
+  text-align: center;
+  width: 2rem;
+  position: absolute;
+  right: -0.6rem;
+  top: -0.5rem;
+  background-color: red;
+  line-height: 1.5rem;
+  font-size: 10px;
+  border-radius: 6px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1522,6 +1578,138 @@ ul.list-product {
 .newsletter .container-newsletter .newsletter-subcribe .subcribe-form .subcribe-btn {
   height: fit-content;
   width: 100%;
+}
+
+.cart-product-price {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  display: block;
+}
+.cart-product-price.cart-discount-price {
+  color: #000000;
+}
+.cart-product-price.cart-basic-price {
+  color: #CECECE;
+  text-decoration-line: line-through;
+}
+
+.cart {
+  margin-top: 13rem;
+}
+.cart .cart-header {
+  display: flex;
+}
+.cart .cart-header .cart-header-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.cart .cart-body {
+  margin-top: 6.5rem;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1rem 3rem;
+}
+.cart .cart-body thead {
+  font-size: 1.4rem;
+  color: #CECECE;
+  text-align: left;
+  border-bottom: 3rem solid transparent;
+}
+.cart .cart-body tbody {
+  padding-top: 3rem;
+}
+.cart .cart-body tbody .cart-product-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.cart .cart-body tbody .cart-product-info {
+  padding-left: 4.8rem;
+}
+.cart .cart-body tbody .cart-product-info .cart-product-name {
+  font-weight: 700;
+}
+.cart .cart-body tbody .cart-product-info .cart-product-id {
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #CECECE;
+}
+.cart .cart-body tbody .cart-product-color {
+  font-size: 1.4rem;
+}
+.cart .cart-body tbody .cart-product-size {
+  font-size: 1.4rem;
+}
+.cart .cart-body tbody .cart-product-amount .amount {
+  border: 1px solid #D8D8D8;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 0.6rem 1rem;
+}
+.cart .cart-body tbody .cart-product-amount .amount .input-amount {
+  border: none;
+  width: 3rem;
+  margin: 0 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.cart .cart-footer {
+  margin-top: 9rem;
+  margin-bottom: 20rem;
+  align-items: center;
+}
+.cart .cart-footer .cart-footer-continue {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: inline;
+  padding-left: 2rem;
+}
+.cart .cart-footer .cart-footer-payment {
+  gap: 7rem;
+}
+.cart .cart-footer .cart-footer-payment .promo-code {
+  border: 1px solid #D8D8D8;
+  border-radius: 50px;
+}
+.cart .cart-footer .cart-footer-payment .promo-code .form-input {
+  color: #ABABAB;
+}
+.cart .cart-footer .cart-footer-payment .promo-code .promo-code-btn {
+  padding-right: 3rem;
+}
+.cart .cart-footer .total-cost {
+  font-size: 1.6rem;
+  display: flex;
+  gap: 2.4rem;
+}
+.cart .cart-footer .total-cost .total-cost-price {
+  font-weight: 700;
+}
+
+.cart-icon.cart-border-icon {
+  size: 1.7rem;
+  background-color: #FBB03B;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.line {
+  display: inline-block;
+  width: 70px;
+  height: 1px;
+  background-color: #EEEEEE;
+  margin: auto 2.4rem;
+  vertical-align: text-top;
+}
+
+tr, td {
+  vertical-align: middle;
+}
+
+tr > th:not(:first-child),
+tr > td:not(:first-child) {
+  text-align: center;
 }
 
 @media screen and (max-width: 767.98px) {

@@ -14,6 +14,17 @@
       justify-content: space-between;
     }
   }
+  .cart-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &:hover {
+    .cart-btn {
+        display: block;
+    }
+}
 }
 @media screen and (max-width: map-get($breakpoints, md)) {
   .product-card {

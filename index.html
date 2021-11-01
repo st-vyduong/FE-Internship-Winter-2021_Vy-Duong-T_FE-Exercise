@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./stylesheets/style.css">
   <title>E-SHOP</title>
 </head>
-<body>
+<body onload="calcAmountInCartIcon()">
   <!-- Header -->
   <header>
     <div class="container container-header">
@@ -38,7 +38,8 @@
                 <a href="#"><img src="./assets/img/search.png" alt="search" class="function-img"></a>
               </li>
               <li class="function-item">
-                <a href="#"><img src="./assets/img/cart.png" alt="cart" class="function-img"></a>
+                <a id="cart-view" href="#" onclick="linkToCart();"><img src="./assets/img/cart.png" alt="cart" class="function-img">
+                </a>
               </li>
               <li class="function-item">
                 <a href="#"><img src="./assets/img/user.png" alt="user" class="function-img"></a>
@@ -133,51 +134,10 @@
       </div>
     </section>
     <!-- Selected -->
-    <section class="selected">
+    <section class="selected" id="selected">
       <div class="container container-selected">
         <h3 class="title">Selected just for you</h3>
-        <ul class="row list-product justify-content-between">
-          <li class="col col-md-3 col-xs-6 list-product-item">
-            <div class="product-card">
-              <img src="./assets/img/product1.png" alt="T-Shirt Summer Vibes" class="product-img">
-              <span class="badge">-30%</span>
-              <div class="product-info">
-                <h4 class="product-name">T-Shirt Summer Vibes</h4>
-                <div class="product-sale">
-                  <span class="product-price discount-price">$89.99</span>
-                  <span class="product-price basic-price">$119.99</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="col col-md-3 col-xs-6 list-product-item">
-            <div class="product-card">
-              <img src="./assets/img/product2.png" alt="Loose Knit 3/4 Sleeve" class="product-img">
-              <div class="product-info">
-                <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
-                <span class="product-price normal-price">$119.99</span>
-              </div>
-            </div>
-          </li>
-          <li class="col col-md-3 col-xs-6 list-product-item">
-            <div class="product-card">
-              <img src="./assets/img/product3.png" alt="Basic Slim Fit T-Shirt" class="product-img">
-              <div class="product-info">
-                <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
-                <span class="product-price normal-price">$79.99</span>
-              </div>
-            </div>
-          </li>
-          <li class="col col-md-3 col-xs-6 list-product-item">
-            <div class="product-card">
-              <img src="./assets/img/product4.png" alt="Loose Textured T-Shirt" class="product-img">
-              <div class="product-info">
-                <h4 class="product-name">Loose Textured T-Shirt</h4>
-                <span class="product-price normal-price">$119.99</span>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <ul class="row list-product justify-content-between"></ul>
         <button class="btn show-btn">SHOW MORE</button>
       </div>
     </section>
@@ -356,5 +316,53 @@
     </div>
     <p class="footer-text txt-center">DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
   </footer>
+  <section class="cart">
+    <div class="container">
+        <div class="cart-header f-row justify-content-between">
+            <h3 class="cart-header-title">Shopping Cart</h3>
+            <div>
+                <img src="./assets/img/noun_cart.png" alt="cart" class="cart-icon cart-border-icon">
+                <div class="line"></div>
+                <img src="./assets/img/noun_delivery.png" alt="delivery" class="cart-icon delivery-icon">   
+            </div>
+        </div>
+        <table class="cart-body">
+            <thead>
+                <th>Product</th>
+                <th>Color</th>
+                <th>Size</th>
+                <th>Amount</th>
+                <th>Price</th>
+                <th></th>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="cart-footer f-row justify-content-between">
+            <div class="cart-continue-shopping">
+                <a href="#selected" class="btn back-btn bg-transparent" onclick="linkToCart()"><img src="./assets/img/noun_Arrow Left.png" alt="Continue Shopping"></a>
+                <h4 class="cart-footer-continue">Continue Shopping</h4>
+            </div>
+            <div class="cart-footer-payment f-row align-item-center">
+                <div class="promo-code">
+                    <input type="text" name="" placeholder="Promo Code" class="form-input">
+                    <button type="button" class="btn promo-code-btn bg-transparent">
+                        <img src="./assets/img/noun_send.png" alt="">
+                    </button>
+                </div>
+                <div class="total-cost">
+                    <h4 class="total-cost-text">Total cost</h4>
+                    <h4 class="total-cost-price"></h4>
+                </div>
+                <button type="button" class="btn form-btn">CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+  </section>
+<script src="./js/class.js"></script>
+<script src="./js/add_cart.js"></script>
+<script src="./js/dump_data.js"></script>
+<script src="./js/change-view.js"></script>
+<script src="./js/handle-amount-product.js"></script>
+<script src="./js/render-cart.js"></script>
 </body>
 </html>
